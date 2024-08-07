@@ -20,8 +20,7 @@
 					"targetIndexes" : 
 					[
 						0,
-						6,
-						7
+						6
 					]
 				},
 				{
@@ -1032,8 +1031,7 @@
 					"targetIndexes" : 
 					[
 						0,
-						6,
-						7
+						6
 					]
 				},
 				{
@@ -1137,7 +1135,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ELF2UF2Build::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ELF2UF2Build-Release-eaf9d719b5e809ca90dc.json",
+					"jsonFile" : "target-ELF2UF2Build-Release-9219f120fd978273549a.json",
 					"name" : "ELF2UF2Build",
 					"projectIndex" : 0
 				},
@@ -1179,15 +1177,8 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "tft_pwm::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-tft_pwm-Release-b3649c9f42b8c7149e31.json",
+					"jsonFile" : "target-tft_pwm-Release-2acd3e12a590d513d498.json",
 					"name" : "tft_pwm",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "tft_pwm_st7789_pio_h::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-tft_pwm_st7789_pio_h-Release-ef79efe31bcd806d8553.json",
-					"name" : "tft_pwm_st7789_pio_h",
 					"projectIndex" : 0
 				}
 			]

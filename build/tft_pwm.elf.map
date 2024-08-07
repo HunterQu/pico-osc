@@ -72,8 +72,8 @@ Discarded input sections
                 0x0000000000000000       0x80 CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
  .text._Z15st7789_init_dmav
                 0x0000000000000000       0x70 CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
- .text._Z24st7789_fill_dma_blockingt
-                0x0000000000000000       0xd8 CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
+ .text._Z19st7789_fill_dma_irqt
+                0x0000000000000000       0x48 CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
  .text          0x0000000000000000        0x0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -1205,58 +1205,9 @@ Discarded input sections
                 0x0000000000000000       0x60 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
  .bss._timer_claimed
                 0x0000000000000000        0x1 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
- .text          0x0000000000000000        0x0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .data          0x0000000000000000        0x0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .bss           0x0000000000000000        0x0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .rodata.pio_sm_claim.str1.4
-                0x0000000000000000       0x40 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_sm_claim
-                0x0000000000000000       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_claim_sm_mask
-                0x0000000000000000       0x74 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_sm_unclaim
-                0x0000000000000000       0x20 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .rodata.pio_claim_unused_sm.str1.4
-                0x0000000000000000       0x24 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_claim_unused_sm
-                0x0000000000000000       0x3c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_sm_is_claimed
-                0x0000000000000000       0x20 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_can_add_program
-                0x0000000000000000       0x68 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_can_add_program_at_offset
-                0x0000000000000000       0x50 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .rodata.pio_add_program.str1.4
-                0x0000000000000000       0x11 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_add_program
-                0x0000000000000000       0xc8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_add_program_at_offset
-                0x0000000000000000       0xb4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_remove_program
-                0x0000000000000000       0x34 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_clear_instruction_memory
-                0x0000000000000000       0x38 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_sm_set_pins
-                0x0000000000000000       0x90 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_sm_set_pins_with_mask
-                0x0000000000000000       0xa4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_sm_set_pindirs_with_mask
-                0x0000000000000000       0xa4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_sm_set_consecutive_pindirs
-                0x0000000000000000       0xb0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_sm_init
-                0x0000000000000000       0x8c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text.pio_sm_drain_tx_fifo
-                0x0000000000000000       0x40 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .bss._used_instruction_space
-                0x0000000000000000        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .bss.claimed   0x0000000000000000        0x1 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .comment       0x0000000000000000       0x4e CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .ARM.attributes
-                0x0000000000000000       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
- .text          0x0000000000000000        0x0 /tmp/cc2nYW7E.o
- .data          0x0000000000000000        0x0 /tmp/cc2nYW7E.o
- .bss           0x0000000000000000        0x0 /tmp/cc2nYW7E.o
+ .text          0x0000000000000000        0x0 /tmp/ccchKYna.o
+ .data          0x0000000000000000        0x0 /tmp/ccchKYna.o
+ .bss           0x0000000000000000        0x0 /tmp/ccchKYna.o
  .data          0x0000000000000000        0x0 /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x0000000000000000        0x0 /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x0000000000000000        0x0 /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-calloc.o)
@@ -1465,11 +1416,11 @@ LOAD /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /tmp/cc2nYW7E.o
+ .boot2         0x0000000010000000      0x100 /tmp/ccchKYna.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x0000000010000100     0x8090
+.text           0x0000000010000100     0x8220
                 0x0000000010000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x0000000010000100       0xd4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1531,649 +1482,649 @@ LOAD /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .text*)
  .text          0x00000000100002bc       0x48 /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
  .text.startup.main
-                0x0000000010000304       0x7c CMakeFiles/tft_pwm.dir/tft_pwm.cpp.obj
+                0x0000000010000304       0x6c CMakeFiles/tft_pwm.dir/tft_pwm.cpp.obj
                 0x0000000010000304                main
  .text._ZL14clear_completev
-                0x0000000010000380       0x2c CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
+                0x0000000010000370       0x2c CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
  .text._Z24st7789_set_bl_brightnessh
-                0x00000000100003ac       0x3c CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
-                0x00000000100003ac                st7789_set_bl_brightness(unsigned char)
+                0x000000001000039c       0x3c CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
+                0x000000001000039c                st7789_set_bl_brightness(unsigned char)
  .text._Z11st7789_fillt
-                0x00000000100003e8      0x1f0 CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
-                0x00000000100003e8                st7789_fill(unsigned short)
+                0x00000000100003d8      0x1f0 CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
+                0x00000000100003d8                st7789_fill(unsigned short)
  .text._Z11st7789_initPK13st7789_configtt
-                0x00000000100005d8      0x988 CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
-                0x00000000100005d8                st7789_init(st7789_config const*, unsigned short, unsigned short)
- .text._Z19st7789_fill_dma_irqt
-                0x0000000010000f60       0x48 CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
-                0x0000000010000f60                st7789_fill_dma_irq(unsigned short)
+                0x00000000100005c8      0x988 CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
+                0x00000000100005c8                st7789_init(st7789_config const*, unsigned short, unsigned short)
+ .text._Z24st7789_fill_dma_blockingt
+                0x0000000010000f50      0x1e8 CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
+                0x0000000010000f50                st7789_fill_dma_blocking(unsigned short)
  .text.gpio_set_function
-                0x0000000010000fa8       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x0000000010000fa8                gpio_set_function
+                0x0000000010001138       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010001138                gpio_set_function
  .text.gpio_set_pulls
-                0x0000000010000fd8       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x0000000010000fd8                gpio_set_pulls
+                0x0000000010001168       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010001168                gpio_set_pulls
  .text.gpio_init
-                0x0000000010001008       0x3c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x0000000010001008                gpio_init
+                0x0000000010001198       0x3c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010001198                gpio_init
  .text.running_on_fpga
-                0x0000000010001044       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x0000000010001044                running_on_fpga
+                0x00000000100011d4       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x00000000100011d4                running_on_fpga
  .text.hw_claim_or_assert
-                0x0000000010001054       0x44 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x0000000010001054                hw_claim_or_assert
+                0x00000000100011e4       0x44 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x00000000100011e4                hw_claim_or_assert
  .text.hw_claim_unused_from_range
-                0x0000000010001098       0x9c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x0000000010001098                hw_claim_unused_from_range
+                0x0000000010001228       0x9c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x0000000010001228                hw_claim_unused_from_range
  .text.spin_locks_reset
-                0x0000000010001134       0x1c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010001134                spin_locks_reset
+                0x00000000100012c4       0x1c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x00000000100012c4                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x0000000010001150       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010001150                next_striped_spin_lock_num
+                0x00000000100012e0       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x00000000100012e0                next_striped_spin_lock_num
  .text.spin_lock_claim_unused
-                0x0000000010001168       0x20 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010001168                spin_lock_claim_unused
+                0x00000000100012f8       0x20 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x00000000100012f8                spin_lock_claim_unused
  .text.irq_set_enabled
-                0x0000000010001188       0x24 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001188                irq_set_enabled
+                0x0000000010001318       0x24 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001318                irq_set_enabled
  .text.irq_set_pending
-                0x00000000100011ac       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100011ac                irq_set_pending
+                0x000000001000133c       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x000000001000133c                irq_set_pending
  .text.irq_has_shared_handler
-                0x00000000100011bc       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100011bc                irq_has_shared_handler
+                0x000000001000134c       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x000000001000134c                irq_has_shared_handler
  .text.irq_get_vtable_handler
-                0x00000000100011e8       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100011e8                irq_get_vtable_handler
+                0x0000000010001378       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001378                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x00000000100011f8       0x54 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100011f8                irq_set_exclusive_handler
+                0x0000000010001388       0x54 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001388                irq_set_exclusive_handler
  .text.irq_add_shared_handler
-                0x000000001000124c      0x1e8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x000000001000124c                irq_add_shared_handler
+                0x00000000100013dc      0x1e8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100013dc                irq_add_shared_handler
  .text.irq_remove_handler
-                0x0000000010001434      0x1b0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001434                irq_remove_handler
+                0x00000000100015c4      0x1b0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100015c4                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x00000000100015e4       0xb4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100015e4                irq_add_tail_to_free_list
+                0x0000000010001774       0xb4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001774                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x0000000010001698       0x24 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001698                irq_init_priorities
+                0x0000000010001828       0x24 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001828                irq_init_priorities
  .text.user_irq_claim_unused
-                0x00000000100016bc       0x28 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100016bc                user_irq_claim_unused
+                0x000000001000184c       0x28 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x000000001000184c                user_irq_claim_unused
  .text.lock_init
-                0x00000000100016e4       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x00000000100016e4                lock_init
+                0x0000000010001874       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x0000000010001874                lock_init
  .text.mutex_init
-                0x00000000100016f4       0x1c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x00000000100016f4                mutex_init
+                0x0000000010001884       0x1c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x0000000010001884                mutex_init
  .text.recursive_mutex_init
-                0x0000000010001710       0x1c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x0000000010001710                recursive_mutex_init
+                0x00000000100018a0       0x1c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x00000000100018a0                recursive_mutex_init
  .text.critical_section_init
-                0x000000001000172c       0x20 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x000000001000172c                critical_section_init
+                0x00000000100018bc       0x20 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x00000000100018bc                critical_section_init
  .text.critical_section_init_with_lock_num
-                0x000000001000174c       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x000000001000174c                critical_section_init_with_lock_num
+                0x00000000100018dc       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x00000000100018dc                critical_section_init_with_lock_num
  .text.timer_pool_entry_comparator
-                0x0000000010001760       0x34 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001760                timer_pool_entry_comparator
+                0x00000000100018f0       0x34 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100018f0                timer_pool_entry_comparator
  .text.sleep_until_callback
-                0x0000000010001794       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001924       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.add_alarm_under_lock.isra.0
-                0x00000000100017c4      0x100 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001954      0x100 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x00000000100018c4      0x1bc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001a54      0x1bc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x0000000010001a80       0x6c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001a80                alarm_pool_init_default
+                0x0000000010001c10       0x6c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001c10                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x0000000010001aec        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001aec                alarm_pool_get_default
+                0x0000000010001c7c        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001c7c                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x0000000010001af4      0x178 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001af4                alarm_pool_add_alarm_at
+                0x0000000010001c84      0x178 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001c84                alarm_pool_add_alarm_at
  .text.alarm_pool_core_num
-                0x0000000010001c6c        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001c6c                alarm_pool_core_num
+                0x0000000010001dfc        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001dfc                alarm_pool_core_num
  .text.sleep_until
-                0x0000000010001c70       0xc4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001c70                sleep_until
+                0x0000000010001e00       0xc4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001e00                sleep_until
  .text.sleep_us
-                0x0000000010001d34       0x24 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001d34                sleep_us
+                0x0000000010001ec4       0x24 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001ec4                sleep_us
  .text.sleep_ms
-                0x0000000010001d58       0x34 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001d58                sleep_ms
+                0x0000000010001ee8       0x34 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001ee8                sleep_ms
  .text.best_effort_wfe_or_timeout
-                0x0000000010001d8c       0xd4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001d8c                best_effort_wfe_or_timeout
+                0x0000000010001f1c       0xd4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001f1c                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x0000000010001e60       0xbc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001ff0       0xbc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x0000000010001f1c       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010001f1c                hardware_alarm_claim
+                0x00000000100020ac       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100020ac                hardware_alarm_claim
  .text.time_us_64
-                0x0000000010001f34       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010001f34                time_us_64
+                0x00000000100020c4       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100020c4                time_us_64
  .text.busy_wait_us
-                0x0000000010001f48       0x54 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010001f48                busy_wait_us
+                0x00000000100020d8       0x54 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100020d8                busy_wait_us
  .text.busy_wait_until
-                0x0000000010001f9c       0x20 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010001f9c                busy_wait_until
+                0x000000001000212c       0x20 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x000000001000212c                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x0000000010001fbc       0x8c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010001fbc                hardware_alarm_set_callback
+                0x000000001000214c       0x8c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x000000001000214c                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x0000000010002048       0xd4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010002048                hardware_alarm_set_target
+                0x00000000100021d8       0xd4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100021d8                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x000000001000211c       0x3c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x000000001000211c                hardware_alarm_cancel
+                0x00000000100022ac       0x3c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100022ac                hardware_alarm_cancel
  .text.ph_merge_nodes
-                0x0000000010002158       0x68 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x00000000100022e8       0x68 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_post_alloc_init
-                0x00000000100021c0       0x3c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x00000000100021c0                ph_post_alloc_init
+                0x0000000010002350       0x3c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010002350                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x00000000100021fc       0x90 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x00000000100021fc                ph_merge_two_pass
+                0x000000001000238c       0x90 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000238c                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x000000001000228c      0x100 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000241c      0x100 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x000000001000238c      0x104 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x000000001000238c                ph_remove_head
+                0x000000001000251c      0x104 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000251c                ph_remove_head
  .text.ph_remove_and_free_node
-                0x0000000010002490       0x7c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010002490                ph_remove_and_free_node
+                0x0000000010002620       0x7c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010002620                ph_remove_and_free_node
  .text.uart_init
-                0x000000001000250c      0x188 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x000000001000250c                uart_init
+                0x000000001000269c      0x188 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x000000001000269c                uart_init
  .text.clocks_init
-                0x0000000010002694      0x2d0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x0000000010002694                clocks_init
+                0x0000000010002824      0x2d0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010002824                clocks_init
  .text.clock_get_hz
-                0x0000000010002964        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x0000000010002964                clock_get_hz
+                0x0000000010002af4        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010002af4                clock_get_hz
  .text.pll_init
-                0x0000000010002970       0xa0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x0000000010002970                pll_init
+                0x0000000010002b00       0xa0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x0000000010002b00                pll_init
  .text.watchdog_start_tick
-                0x0000000010002a10       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x0000000010002a10                watchdog_start_tick
+                0x0000000010002ba0       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x0000000010002ba0                watchdog_start_tick
  .text.watchdog_reboot
-                0x0000000010002a20       0x98 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x0000000010002a20                watchdog_reboot
+                0x0000000010002bb0       0x98 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x0000000010002bb0                watchdog_reboot
  .text.xosc_init
-                0x0000000010002ab8       0x28 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x0000000010002ab8                xosc_init
+                0x0000000010002c48       0x28 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x0000000010002c48                xosc_init
  .text.runtime_init
-                0x0000000010002ae0       0xf0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010002ae0                runtime_init
- .text._exit    0x0000000010002bd0        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010002bd0                _exit
- .text.exit     0x0000000010002bd4        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010002bd4                exit
- .text.panic    0x0000000010002bdc       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010002bdc                panic
+                0x0000000010002c70       0xf0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002c70                runtime_init
+ .text._exit    0x0000000010002d60        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002d60                _exit
+ .text.exit     0x0000000010002d64        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002d64                exit
+ .text.panic    0x0000000010002d6c       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002d6c                panic
  .text.hard_assertion_failure
-                0x0000000010002c0c        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010002c0c                hard_assertion_failure
+                0x0000000010002d9c        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002d9c                hard_assertion_failure
  .text._out_null
-                0x0000000010002c18        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002da8        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x0000000010002c1c       0x9c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002dac       0x9c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x0000000010002cb8      0x1cc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002e48      0x1cc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_char
-                0x0000000010002e84       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010003014       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x0000000010002e94       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._etoa    0x0000000010002ea4      0x44c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x00000000100032f0      0x398 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010003024       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._etoa    0x0000000010003034      0x44c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x0000000010003480      0x398 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x0000000010003688      0xb04 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010003818      0xb04 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.vfctprintf
-                0x000000001000418c       0x20 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x000000001000418c                vfctprintf
+                0x000000001000431c       0x20 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x000000001000431c                vfctprintf
  .text.weak_raw_vprintf
-                0x00000000100041ac       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x00000000100041ac                weak_raw_vprintf
- .text          0x00000000100041dc       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x000000001000433c       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x000000001000433c                weak_raw_vprintf
+ .text          0x000000001000436c       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x00000000100041ec       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x00000000100041ec                rom_func_lookup
+                0x000000001000437c       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x000000001000437c                rom_func_lookup
  .text.rom_data_lookup
-                0x00000000100041fc       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x00000000100041fc                rom_data_lookup
+                0x000000001000438c       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x000000001000438c                rom_data_lookup
  .text.rom_funcs_lookup
-                0x000000001000420c       0x44 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x000000001000420c                rom_funcs_lookup
+                0x000000001000439c       0x44 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x000000001000439c                rom_funcs_lookup
  .text.__wrap___aeabi_idiv
-                0x0000000010004250       0x50 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x0000000010004250                __wrap___aeabi_idivmod
-                0x0000000010004250                divmod_s32s32
-                0x0000000010004250                div_s32s32
-                0x0000000010004250                __wrap___aeabi_idiv
-                0x0000000010004258                divmod_s32s32_unsafe
-                0x0000000010004284                divmod_s32s32_savestate
+                0x00000000100043e0       0x50 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x00000000100043e0                __wrap___aeabi_idivmod
+                0x00000000100043e0                divmod_s32s32
+                0x00000000100043e0                div_s32s32
+                0x00000000100043e0                __wrap___aeabi_idiv
+                0x00000000100043e8                divmod_s32s32_unsafe
+                0x0000000010004414                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x00000000100042a0       0x4c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x00000000100042a0                __wrap___aeabi_uidiv
-                0x00000000100042a0                __wrap___aeabi_uidivmod
-                0x00000000100042a0                div_u32u32
-                0x00000000100042a0                divmod_u32u32
-                0x00000000100042a8                divmod_u32u32_unsafe
-                0x00000000100042d0                divmod_u32u32_savestate
+                0x0000000010004430       0x4c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x0000000010004430                __wrap___aeabi_uidiv
+                0x0000000010004430                __wrap___aeabi_uidivmod
+                0x0000000010004430                div_u32u32
+                0x0000000010004430                divmod_u32u32
+                0x0000000010004438                divmod_u32u32_unsafe
+                0x0000000010004460                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x00000000100042ec      0x424 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x00000000100042ec                div_s64s64
-                0x00000000100042ec                divmod_s64s64
-                0x00000000100042ec                __wrap___aeabi_ldivmod
-                0x000000001000431c                div_u64u64
-                0x000000001000431c                divmod_u64u64
-                0x000000001000431c                __wrap___aeabi_uldivmod
-                0x000000001000432c                divmod_u64u64_savestate
-                0x000000001000434c                divmod_s64s64_unsafe
-                0x00000000100043d4                divmod_u64u64_unsafe
+                0x000000001000447c      0x424 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x000000001000447c                div_s64s64
+                0x000000001000447c                divmod_s64s64
+                0x000000001000447c                __wrap___aeabi_ldivmod
+                0x00000000100044ac                div_u64u64
+                0x00000000100044ac                divmod_u64u64
+                0x00000000100044ac                __wrap___aeabi_uldivmod
+                0x00000000100044bc                divmod_u64u64_savestate
+                0x00000000100044dc                divmod_s64s64_unsafe
+                0x0000000010004564                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x0000000010004710       0x80 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010004710                __wrap___aeabi_drsub
-                0x0000000010004716                __wrap___aeabi_dsub
-                0x0000000010004728                __wrap___aeabi_dadd
-                0x000000001000473a                __wrap___aeabi_ddiv
-                0x0000000010004776                __wrap___aeabi_dmul
+                0x00000000100048a0       0x80 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000100048a0                __wrap___aeabi_drsub
+                0x00000000100048a6                __wrap___aeabi_dsub
+                0x00000000100048b8                __wrap___aeabi_dadd
+                0x00000000100048ca                __wrap___aeabi_ddiv
+                0x0000000010004906                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x0000000010004790       0x6c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010004790                __wrap___aeabi_cdrcmple
-                0x00000000100047a0                __wrap___aeabi_cdcmple
-                0x00000000100047a0                __wrap___aeabi_cdcmpeq
+                0x0000000010004920       0x6c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010004920                __wrap___aeabi_cdrcmple
+                0x0000000010004930                __wrap___aeabi_cdcmple
+                0x0000000010004930                __wrap___aeabi_cdcmpeq
  .text.__wrap___aeabi_dcmplt
-                0x00000000100047fc        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x00000000100047fc                __wrap___aeabi_dcmplt
+                0x000000001000498c        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x000000001000498c                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmple
-                0x0000000010004808       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010004808                __wrap___aeabi_dcmple
+                0x0000000010004998       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010004998                __wrap___aeabi_dcmple
  .text.__wrap___aeabi_dcmpge
-                0x0000000010004818       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010004818                __wrap___aeabi_dcmpge
+                0x00000000100049a8       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000100049a8                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x0000000010004828        0xa CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010004828                __wrap___aeabi_dcmpgt
+                0x00000000100049b8        0xa CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000100049b8                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x0000000010004832       0x1c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010004832                __wrap___aeabi_dcmpun
- *fill*         0x000000001000484e        0x2 
+                0x00000000100049c2       0x1c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000100049c2                __wrap___aeabi_dcmpun
+ *fill*         0x00000000100049de        0x2 
  .text.__wrap___aeabi_i2d
-                0x0000000010004850       0x38 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010004850                __wrap___aeabi_ui2d
-                0x0000000010004858                __wrap___aeabi_i2d
+                0x00000000100049e0       0x38 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000100049e0                __wrap___aeabi_ui2d
+                0x00000000100049e8                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x0000000010004888       0x48 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010004888                __wrap___aeabi_d2iz
-                0x0000000010004888                double2int_z
+                0x0000000010004a18       0x48 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010004a18                __wrap___aeabi_d2iz
+                0x0000000010004a18                double2int_z
  .text.__wrap___aeabi_d2uiz
-                0x00000000100048d0       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x00000000100048d0                double2uint
-                0x00000000100048d0                __wrap___aeabi_d2uiz
+                0x0000000010004a60       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010004a60                double2uint
+                0x0000000010004a60                __wrap___aeabi_d2uiz
  .text.__aeabi_double_init
-                0x00000000100048e8       0x94 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x00000000100048e8                __aeabi_double_init
+                0x0000000010004a78       0x94 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000010004a78                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x000000001000497c       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x000000001000497c                double_table_shim_on_use_helper
+                0x0000000010004b0c       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004b0c                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x00000000100049a8       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x00000000100049a8                drsub_shim
-                0x00000000100049ae                dsub_shim
+                0x0000000010004b38       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004b38                drsub_shim
+                0x0000000010004b3e                dsub_shim
  .text.dadd_shim
-                0x00000000100049b8      0x15c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x00000000100049b8                dadd_shim
+                0x0000000010004b48      0x15c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004b48                dadd_shim
  .text.dmul_shim
-                0x0000000010004b14      0x15c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004b14                dmul_shim
+                0x0000000010004ca4      0x15c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004ca4                dmul_shim
  .text.ddiv_shim
-                0x0000000010004c70      0x1b0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004c70                ddiv_shim
+                0x0000000010004e00      0x1b0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004e00                ddiv_shim
  .text.double2uint_shim
-                0x0000000010004e20        0xe CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004e20                double2uint_shim
-                0x0000000010004e22                double2ufix_shim
- *fill*         0x0000000010004e2e        0x2 
+                0x0000000010004fb0        0xe CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004fb0                double2uint_shim
+                0x0000000010004fb2                double2ufix_shim
+ *fill*         0x0000000010004fbe        0x2 
  .text.double2uint64_shim
-                0x0000000010004e30       0x70 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004e30                double2uint64_shim
-                0x0000000010004e32                double2ufix64_shim
-                0x0000000010004e52                d2fix_a
+                0x0000000010004fc0       0x70 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004fc0                double2uint64_shim
+                0x0000000010004fc2                double2ufix64_shim
+                0x0000000010004fe2                d2fix_a
  .text.dunpacks
-                0x0000000010004ea0       0x3c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004ea0                dunpacks
+                0x0000000010005030       0x3c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010005030                dunpacks
  .text.__aeabi_lmul
-                0x0000000010004edc       0x32 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x0000000010004edc                __wrap___aeabi_lmul
- *fill*         0x0000000010004f0e        0x2 
+                0x000000001000506c       0x32 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x000000001000506c                __wrap___aeabi_lmul
+ *fill*         0x000000001000509e        0x2 
  .text.__wrap___aeabi_farithmetic
-                0x0000000010004f10       0x48 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x0000000010004f10                __wrap___aeabi_frsub
-                0x0000000010004f16                __wrap___aeabi_fsub
-                0x0000000010004f1c                __wrap___aeabi_fadd
-                0x0000000010004f22                __wrap___aeabi_fdiv
-                0x0000000010004f4a                __wrap___aeabi_fmul
+                0x00000000100050a0       0x48 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x00000000100050a0                __wrap___aeabi_frsub
+                0x00000000100050a6                __wrap___aeabi_fsub
+                0x00000000100050ac                __wrap___aeabi_fadd
+                0x00000000100050b2                __wrap___aeabi_fdiv
+                0x00000000100050da                __wrap___aeabi_fmul
  .text.__wrap___aeabi_ui2f
-                0x0000000010004f58        0xa CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x0000000010004f58                __wrap___aeabi_ui2f
- *fill*         0x0000000010004f62        0x2 
+                0x00000000100050e8        0xa CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x00000000100050e8                __wrap___aeabi_ui2f
+ *fill*         0x00000000100050f2        0x2 
  .text.__wrap___aeabi_i2f
-                0x0000000010004f64       0x44 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x0000000010004f64                __wrap___aeabi_i2f
+                0x00000000100050f4       0x44 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x00000000100050f4                __wrap___aeabi_i2f
  .text.__wrap___aeabi_f2d
-                0x0000000010004fa8       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x0000000010004fa8                __wrap___aeabi_f2d
+                0x0000000010005138       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x0000000010005138                __wrap___aeabi_f2d
  .text.__aeabi_float_init
-                0x0000000010004fbc       0x64 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x0000000010004fbc                __aeabi_float_init
+                0x000000001000514c       0x64 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x000000001000514c                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x0000000010005020       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x0000000010005020                float_table_shim_on_use_helper
+                0x00000000100051b0       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x00000000100051b0                float_table_shim_on_use_helper
  .text.float2double_shim
-                0x000000001000504c       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x000000001000504c                float2double_shim
- .text          0x000000001000507c       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x000000001000507c                __aeabi_mem_init
- .text.memset   0x000000001000508c        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x000000001000508c                __wrap_memset
- .text.memcpy   0x0000000010005098        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010005098                __wrap___aeabi_memcpy
-                0x0000000010005098                __wrap_memcpy
+                0x00000000100051dc       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x00000000100051dc                float2double_shim
+ .text          0x000000001000520c       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x000000001000520c                __aeabi_mem_init
+ .text.memset   0x000000001000521c        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x000000001000521c                __wrap_memset
+ .text.memcpy   0x0000000010005228        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010005228                __wrap___aeabi_memcpy
+                0x0000000010005228                __wrap_memcpy
  .text.stdio_out_chars_no_crlf
-                0x00000000100050a4       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010005234       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_out_chars_crlf
-                0x00000000100050b4       0xb4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010005244       0xb4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x0000000010005168       0x64 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100052f8       0x64 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_put_string.isra.0
-                0x00000000100051cc       0xfc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x000000001000535c       0xfc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.__wrap_putchar
-                0x00000000100052c8       0x98 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x00000000100052c8                __wrap_putchar
+                0x0000000010005458       0x98 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010005458                __wrap_putchar
  .text.__wrap_puts
-                0x0000000010005360       0x3c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010005360                __wrap_puts
+                0x00000000100054f0       0x3c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100054f0                __wrap_puts
  .text.stdio_set_driver_enabled
-                0x000000001000539c       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x000000001000539c                stdio_set_driver_enabled
+                0x000000001000552c       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x000000001000552c                stdio_set_driver_enabled
  .text.__wrap_vprintf
-                0x00000000100053cc       0xd8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x00000000100053cc                __wrap_vprintf
+                0x000000001000555c       0xd8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x000000001000555c                __wrap_vprintf
  .text.__wrap_printf
-                0x00000000100054a4       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x00000000100054a4                __wrap_printf
+                0x0000000010005634       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010005634                __wrap_printf
  .text.stdio_init_all
-                0x00000000100054bc       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x00000000100054bc                stdio_init_all
+                0x000000001000564c       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x000000001000564c                stdio_init_all
  .text.stdio_uart_out_chars
-                0x00000000100054cc       0x4c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x000000001000565c       0x4c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_in_chars
-                0x0000000010005518       0x84 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x0000000010005518                stdio_uart_in_chars
+                0x00000000100056a8       0x84 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000100056a8                stdio_uart_in_chars
  .text.on_uart_rx
-                0x000000001000559c       0x28 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x000000001000572c       0x28 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_set_chars_available_callback
-                0x00000000100055c4       0x8c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010005754       0x8c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_init
-                0x0000000010005650       0x48 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x0000000010005650                stdio_uart_init
+                0x00000000100057e0       0x48 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000100057e0                stdio_uart_init
  .text.resetd_init
-                0x0000000010005698        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010005828        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_reset
-                0x000000001000569c        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x000000001000582c        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_open
-                0x00000000100056a8       0x28 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010005838       0x28 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_xfer_cb
-                0x00000000100056d0        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010005860        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_control_xfer_cb
-                0x00000000100056d4       0x64 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010005864       0x64 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.usbd_app_driver_get_cb
-                0x0000000010005738        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x0000000010005738                usbd_app_driver_get_cb
+                0x00000000100058c8        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100058c8                usbd_app_driver_get_cb
  .text.tud_cdc_line_coding_cb
-                0x0000000010005744       0x34 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x0000000010005744                tud_cdc_line_coding_cb
+                0x00000000100058d4       0x34 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100058d4                tud_cdc_line_coding_cb
  .text.stdio_usb_set_chars_available_callback
-                0x0000000010005778       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x0000000010005778                stdio_usb_set_chars_available_callback
- .text.usb_irq  0x000000001000578c       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010005908       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010005908                stdio_usb_set_chars_available_callback
+ .text.usb_irq  0x000000001000591c       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.timer_task
-                0x000000001000579c       0x54 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x000000001000592c       0x54 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.stdio_usb_in_chars
-                0x00000000100057f0       0x90 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x00000000100057f0                stdio_usb_in_chars
+                0x0000000010005980       0x90 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010005980                stdio_usb_in_chars
  .text.stdio_usb_out_chars
-                0x0000000010005880      0x100 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010005a10      0x100 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.low_priority_worker_irq
-                0x0000000010005980       0xa8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010005b10       0xa8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.tud_cdc_rx_cb
-                0x0000000010005a28       0x20 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x0000000010005a28                tud_cdc_rx_cb
+                0x0000000010005bb8       0x20 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010005bb8                tud_cdc_rx_cb
  .text.stdio_usb_init
-                0x0000000010005a48       0xdc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x0000000010005a48                stdio_usb_init
+                0x0000000010005bd8       0xdc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010005bd8                stdio_usb_init
  .text.tud_descriptor_device_cb
-                0x0000000010005b24        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x0000000010005b24                tud_descriptor_device_cb
+                0x0000000010005cb4        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010005cb4                tud_descriptor_device_cb
  .text.tud_descriptor_configuration_cb
-                0x0000000010005b2c        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x0000000010005b2c                tud_descriptor_configuration_cb
+                0x0000000010005cbc        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010005cbc                tud_descriptor_configuration_cb
  .text.tud_descriptor_string_cb
-                0x0000000010005b34       0x74 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x0000000010005b34                tud_descriptor_string_cb
+                0x0000000010005cc4       0x74 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010005cc4                tud_descriptor_string_cb
  .text.startup._retrieve_unique_id_on_boot
-                0x0000000010005ba8       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000010005d38       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .text.pico_get_unique_board_id
-                0x0000000010005bb8       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x0000000010005bb8                pico_get_unique_board_id
+                0x0000000010005d48       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000010005d48                pico_get_unique_board_id
  .text.pico_get_unique_board_id_string
-                0x0000000010005bc8      0x1a8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x0000000010005bc8                pico_get_unique_board_id_string
+                0x0000000010005d58      0x1a8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000010005d58                pico_get_unique_board_id_string
  .text.flash_get_unique_id
-                0x0000000010005d70       0x40 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-                0x0000000010005d70                flash_get_unique_id
+                0x0000000010005f00       0x40 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x0000000010005f00                flash_get_unique_id
  .text.dcd_int_enable
-                0x0000000010005db0        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005db0                dcd_int_enable
+                0x0000000010005f40        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005f40                dcd_int_enable
  .text.dcd_set_address
-                0x0000000010005dbc       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005dbc                dcd_set_address
+                0x0000000010005f4c       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005f4c                dcd_set_address
  .text.dcd_connect
-                0x0000000010005dd0       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005dd0                dcd_connect
+                0x0000000010005f60       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005f60                dcd_connect
  .text.dcd_init
-                0x0000000010005de0       0x98 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005de0                dcd_init
+                0x0000000010005f70       0x98 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005f70                dcd_init
  .text.dcd_edpt0_status_complete
-                0x0000000010005e78       0x1c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005e78                dcd_edpt0_status_complete
+                0x0000000010006008       0x1c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010006008                dcd_edpt0_status_complete
  .text.dcd_edpt_open
-                0x0000000010005e94      0x108 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005e94                dcd_edpt_open
+                0x0000000010006024      0x108 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010006024                dcd_edpt_open
  .text.dcd_edpt_close_all
-                0x0000000010005f9c        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005f9c                dcd_edpt_close_all
+                0x000000001000612c        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000612c                dcd_edpt_close_all
  .text.dcd_edpt_xfer
-                0x0000000010005fa4       0x24 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005fa4                dcd_edpt_xfer
+                0x0000000010006134       0x24 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010006134                dcd_edpt_xfer
  .text.dcd_edpt_stall
-                0x0000000010005fc8       0x38 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005fc8                dcd_edpt_stall
+                0x0000000010006158       0x38 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010006158                dcd_edpt_stall
  .text.dcd_edpt_clear_stall
-                0x0000000010006000       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010006000                dcd_edpt_clear_stall
+                0x0000000010006190       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010006190                dcd_edpt_clear_stall
  .text.rp2040_usb_init
-                0x0000000010006030       0x4c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x0000000010006030                rp2040_usb_init
+                0x00000000100061c0       0x4c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x00000000100061c0                rp2040_usb_init
  .text.hw_endpoint_xfer_start
-                0x000000001000607c       0x50 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x000000001000607c                hw_endpoint_xfer_start
+                0x000000001000620c       0x50 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x000000001000620c                hw_endpoint_xfer_start
  .text.tud_mounted
-                0x00000000100060cc       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100060cc                tud_mounted
+                0x000000001000625c       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000625c                tud_mounted
  .text.tud_suspended
-                0x00000000100060dc       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100060dc                tud_suspended
+                0x000000001000626c       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000626c                tud_suspended
  .text.tud_inited
-                0x00000000100060ec       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100060ec                tud_inited
+                0x000000001000627c       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000627c                tud_inited
  .text.tud_init
-                0x0000000010006100       0xe4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006100                tud_init
+                0x0000000010006290       0xe4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006290                tud_init
  .text.tud_task_ext
-                0x00000000100061e4      0x854 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100061e4                tud_task_ext
+                0x0000000010006374      0x854 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006374                tud_task_ext
  .text.usbd_open_edpt_pair
-                0x0000000010006a38       0x9c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006a38                usbd_open_edpt_pair
+                0x0000000010006bc8       0x9c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006bc8                usbd_open_edpt_pair
  .text.usbd_defer_func
-                0x0000000010006ad4       0x48 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006ad4                usbd_defer_func
+                0x0000000010006c64       0x48 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006c64                usbd_defer_func
  .text.usbd_edpt_open
-                0x0000000010006b1c       0x34 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006b1c                usbd_edpt_open
+                0x0000000010006cac       0x34 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006cac                usbd_edpt_open
  .text.usbd_edpt_claim
-                0x0000000010006b50       0x28 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006b50                usbd_edpt_claim
+                0x0000000010006ce0       0x28 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006ce0                usbd_edpt_claim
  .text.usbd_edpt_release
-                0x0000000010006b78       0x28 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006b78                usbd_edpt_release
+                0x0000000010006d08       0x28 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006d08                usbd_edpt_release
  .text.usbd_edpt_xfer
-                0x0000000010006ba0       0x4c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006ba0                usbd_edpt_xfer
+                0x0000000010006d30       0x4c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006d30                usbd_edpt_xfer
  .text.tud_control_status
-                0x0000000010006bec       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010006bec                tud_control_status
+                0x0000000010006d7c       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010006d7c                tud_control_status
  .text.tud_control_xfer
-                0x0000000010006c1c       0xbc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010006c1c                tud_control_xfer
+                0x0000000010006dac       0xbc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010006dac                tud_control_xfer
  .text.usbd_control_reset
-                0x0000000010006cd8       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010006cd8                usbd_control_reset
+                0x0000000010006e68       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010006e68                usbd_control_reset
  .text.usbd_control_set_complete_callback
-                0x0000000010006cec        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010006cec                usbd_control_set_complete_callback
+                0x0000000010006e7c        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010006e7c                usbd_control_set_complete_callback
  .text.usbd_control_set_request
-                0x0000000010006cf8       0x1c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010006cf8                usbd_control_set_request
+                0x0000000010006e88       0x1c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010006e88                usbd_control_set_request
  .text.usbd_control_xfer_cb
-                0x0000000010006d14       0xfc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010006d14                usbd_control_xfer_cb
+                0x0000000010006ea4       0xfc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010006ea4                usbd_control_xfer_cb
  .text.tud_cdc_n_connected
-                0x0000000010006e10       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006e10                tud_cdc_n_connected
+                0x0000000010006fa0       0x30 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006fa0                tud_cdc_n_connected
  .text.tud_cdc_n_available
-                0x0000000010006e40       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006e40                tud_cdc_n_available
+                0x0000000010006fd0       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006fd0                tud_cdc_n_available
  .text.tud_cdc_n_read
-                0x0000000010006e58       0x70 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006e58                tud_cdc_n_read
+                0x0000000010006fe8       0x70 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010006fe8                tud_cdc_n_read
  .text.tud_cdc_n_write_flush
-                0x0000000010006ec8       0x78 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006ec8                tud_cdc_n_write_flush
+                0x0000000010007058       0x78 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010007058                tud_cdc_n_write_flush
  .text.tud_cdc_n_write
-                0x0000000010006f40       0x34 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006f40                tud_cdc_n_write
+                0x00000000100070d0       0x34 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x00000000100070d0                tud_cdc_n_write
  .text.tud_cdc_n_write_available
-                0x0000000010006f74       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006f74                tud_cdc_n_write_available
+                0x0000000010007104       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010007104                tud_cdc_n_write_available
  .text.cdcd_init
-                0x0000000010006f8c       0x7c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006f8c                cdcd_init
+                0x000000001000711c       0x7c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000711c                cdcd_init
  .text.cdcd_reset
-                0x0000000010007008       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010007008                cdcd_reset
+                0x0000000010007198       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010007198                cdcd_reset
  .text.cdcd_open
-                0x0000000010007034       0xe8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010007034                cdcd_open
+                0x00000000100071c4       0xe8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x00000000100071c4                cdcd_open
  .text.cdcd_control_xfer_cb
-                0x000000001000711c       0xe4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000711c                cdcd_control_xfer_cb
+                0x00000000100072ac       0xe4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x00000000100072ac                cdcd_control_xfer_cb
  .text.cdcd_xfer_cb
-                0x0000000010007200      0x148 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010007200                cdcd_xfer_cb
+                0x0000000010007390      0x148 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010007390                cdcd_xfer_cb
  .text.tusb_init
-                0x0000000010007348        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x0000000010007348                tusb_init
+                0x00000000100074d8        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x00000000100074d8                tusb_init
  .text.tusb_inited
-                0x0000000010007354        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x0000000010007354                tusb_inited
+                0x00000000100074e4        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x00000000100074e4                tusb_inited
  .text.tu_edpt_claim
-                0x000000001000735c       0x50 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x000000001000735c                tu_edpt_claim
+                0x00000000100074ec       0x50 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x00000000100074ec                tu_edpt_claim
  .text.tu_edpt_release
-                0x00000000100073ac       0x38 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x00000000100073ac                tu_edpt_release
+                0x000000001000753c       0x38 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x000000001000753c                tu_edpt_release
  .text.tu_edpt_validate
-                0x00000000100073e4       0x78 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x00000000100073e4                tu_edpt_validate
+                0x0000000010007574       0x78 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x0000000010007574                tu_edpt_validate
  .text.tu_edpt_bind_driver
-                0x000000001000745c       0x34 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x000000001000745c                tu_edpt_bind_driver
+                0x00000000100075ec       0x34 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x00000000100075ec                tu_edpt_bind_driver
  .text.tu_fifo_config
-                0x0000000010007490       0x70 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010007490                tu_fifo_config
+                0x0000000010007620       0x70 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010007620                tu_fifo_config
  .text.tu_fifo_count
-                0x0000000010007500       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010007500                tu_fifo_count
+                0x0000000010007690       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010007690                tu_fifo_count
  .text.tu_fifo_empty
-                0x000000001000752c       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000752c                tu_fifo_empty
+                0x00000000100076bc       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x00000000100076bc                tu_fifo_empty
  .text.tu_fifo_remaining
-                0x000000001000753c       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000753c                tu_fifo_remaining
+                0x00000000100076cc       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x00000000100076cc                tu_fifo_remaining
  .text.tu_fifo_read
-                0x0000000010007568       0xa0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010007568                tu_fifo_read
+                0x00000000100076f8       0xa0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x00000000100076f8                tu_fifo_read
  .text.tu_fifo_read_n
-                0x0000000010007608       0xec CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010007608                tu_fifo_read_n
+                0x0000000010007798       0xec CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010007798                tu_fifo_read_n
  .text.tu_fifo_write
-                0x00000000100076f4       0x88 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x00000000100076f4                tu_fifo_write
+                0x0000000010007884       0x88 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010007884                tu_fifo_write
  .text.tu_fifo_write_n
-                0x000000001000777c      0x168 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000777c                tu_fifo_write_n
+                0x000000001000790c      0x168 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000790c                tu_fifo_write_n
  .text.tu_fifo_clear
-                0x00000000100078e4       0x40 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x00000000100078e4                tu_fifo_clear
+                0x0000000010007a74       0x40 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010007a74                tu_fifo_clear
  .text.tu_fifo_set_overwritable
-                0x0000000010007924       0x48 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010007924                tu_fifo_set_overwritable
+                0x0000000010007ab4       0x48 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010007ab4                tu_fifo_set_overwritable
  .text.splitmix64
-                0x000000001000796c       0x5c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+                0x0000000010007afc       0x5c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
  .text.xoroshiro128ss
-                0x00000000100079c8       0x90 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+                0x0000000010007b58       0x90 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
  .text.get_rand_64
-                0x0000000010007a58      0x484 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
-                0x0000000010007a58                get_rand_64
+                0x0000000010007be8      0x484 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+                0x0000000010007be8                get_rand_64
  .text.get_rand_32
-                0x0000000010007edc        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
-                0x0000000010007edc                get_rand_32
+                0x000000001000806c        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
+                0x000000001000806c                get_rand_32
  .text.spi_init
-                0x0000000010007ee4      0x138 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-                0x0000000010007ee4                spi_init
+                0x0000000010008074      0x138 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+                0x0000000010008074                spi_init
  .text.dma_claim_unused_channel
-                0x000000001000801c       0x20 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
-                0x000000001000801c                dma_claim_unused_channel
- .text.strlen   0x000000001000803c       0x5c /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
-                0x000000001000803c                strlen
+                0x00000000100081ac       0x20 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+                0x00000000100081ac                dma_claim_unused_channel
+ .text.strlen   0x00000000100081cc       0x5c /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x00000000100081cc                strlen
  *(.fini)
- .fini          0x0000000010008098        0x4 /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crti.o
-                0x0000000010008098                _fini
- *fill*         0x000000001000809c        0x4 
- .fini.__stub   0x00000000100080a0       0xf0 linker stubs
+ .fini          0x0000000010008228        0x4 /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crti.o
+                0x0000000010008228                _fini
+ *fill*         0x000000001000822c        0x4 
+ .fini.__stub   0x0000000010008230       0xf0 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2185,150 +2136,149 @@ LOAD /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x0000000010008190        0x0 /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000010008190                . = ALIGN (0x4)
+ .eh_frame      0x0000000010008320        0x0 /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000010008320                . = ALIGN (0x4)
 
-.glue_7         0x0000000010008190        0x0
- .glue_7        0x0000000010008190        0x0 linker stubs
+.glue_7         0x0000000010008320        0x0
+ .glue_7        0x0000000010008320        0x0 linker stubs
 
-.glue_7t        0x0000000010008190        0x0
- .glue_7t       0x0000000010008190        0x0 linker stubs
+.glue_7t        0x0000000010008320        0x0
+ .glue_7t       0x0000000010008320        0x0 linker stubs
 
-.vfp11_veneer   0x0000000010008190        0x0
- .vfp11_veneer  0x0000000010008190        0x0 linker stubs
+.vfp11_veneer   0x0000000010008320        0x0
+ .vfp11_veneer  0x0000000010008320        0x0 linker stubs
 
-.v4_bx          0x0000000010008190        0x0
- .v4_bx         0x0000000010008190        0x0 linker stubs
+.v4_bx          0x0000000010008320        0x0
+ .v4_bx         0x0000000010008320        0x0 linker stubs
 
-.iplt           0x0000000010008190        0x0
- .iplt          0x0000000010008190        0x0 /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x0000000010008320        0x0
+ .iplt          0x0000000010008320        0x0 /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x0000000010008190      0x5f4
+.rodata         0x0000000010008320      0x5ec
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.main.str1.4
-                0x0000000010008190       0x17 CMakeFiles/tft_pwm.dir/tft_pwm.cpp.obj
- *fill*         0x00000000100081a7        0x1 
+                0x0000000010008320       0x13 CMakeFiles/tft_pwm.dir/tft_pwm.cpp.obj
+ *fill*         0x0000000010008333        0x1 
  .rodata._ZL10lcd_config
-                0x00000000100081a8       0x20 CMakeFiles/tft_pwm.dir/tft_pwm.cpp.obj
+                0x0000000010008334       0x20 CMakeFiles/tft_pwm.dir/tft_pwm.cpp.obj
  .rodata._Z11st7789_initPK13st7789_configtt.str1.4
-                0x00000000100081c8       0x2a CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
- *fill*         0x00000000100081f2        0x2 
- .rodata        0x00000000100081f4       0x10 CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
+                0x0000000010008354       0x2a CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
+ *fill*         0x000000001000837e        0x2 
+ .rodata        0x0000000010008380       0x10 CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj
  .rodata.spin_lock_claim_unused.str1.4
-                0x0000000010008204       0x1b CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x000000001000821f        0x1 
+                0x0000000010008390       0x1b CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x00000000100083ab        0x1 
  .rodata.user_irq_claim_unused.str1.4
-                0x0000000010008220       0x1b CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x000000001000823b        0x1 
+                0x00000000100083ac       0x1b CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x00000000100083c7        0x1 
  .rodata.hardware_alarm_claim.str1.4
-                0x000000001000823c       0x22 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x000000001000825e        0x2 
+                0x00000000100083c8       0x22 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x00000000100083ea        0x2 
  .rodata.panic.str1.4
-                0x0000000010008260       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x00000000100083ec       0x10 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                          0x12 (size before relaxing)
  .rodata.hard_assertion_failure.str1.4
-                0x0000000010008270        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x00000000100083fc        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata._ftoa.str1.4
-                0x000000001000827c       0x15 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x0000000010008291        0x3 
+                0x0000000010008408       0x15 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x000000001000841d        0x3 
  .rodata._vsnprintf
-                0x0000000010008294      0x1e0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x0000000010008474        0x4 
+                0x0000000010008420      0x1e0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.pow10.0
-                0x0000000010008478       0x50 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010008600       0x50 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.str1.4
-                0x00000000100084c8       0x40 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008650       0x40 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x0000000010008508        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008690        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_56
-                0x0000000010008514        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000869c        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x0000000010008520        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100086a8        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x000000001000852c        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100086b4        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.0
-                0x0000000010008538        0x2 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x000000001000853a        0x2 
+                0x00000000100086c0        0x2 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x00000000100086c2        0x2 
  .rodata.str1.4
-                0x000000001000853c       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000100086c4       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_33.4
-                0x0000000010008568        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000100086f0        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_34.5
-                0x0000000010008574        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000000100086fc        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata._resetd_driver
-                0x000000001000857c       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010008704       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .rodata.str1.4
-                0x0000000010008594       0x13 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- *fill*         0x00000000100085a7        0x1 
+                0x000000001000871c       0x13 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ *fill*         0x000000001000872f        0x1 
  .rodata.__bi_182.0
-                0x00000000100085a8        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010008730        0xc CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.str1.4
-                0x00000000100085b4       0x2a CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x00000000100085de        0x2 
+                0x000000001000873c       0x2a CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x0000000010008766        0x2 
  .rodata.usbd_desc_cfg
-                0x00000000100085e0       0x54 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010008768       0x54 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_device
-                0x0000000010008634       0x12 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x0000000010008646        0x2 
+                0x00000000100087bc       0x12 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x00000000100087ce        0x2 
  .rodata.usbd_desc_str
-                0x0000000010008648       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x00000000100087d0       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.str1.4
-                0x0000000010008660       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100087e8       0x14 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.str1.4
-                0x0000000010008674       0x49 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x00000000100087fc       0x49 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
                                          0x53 (size before relaxing)
- *fill*         0x00000000100086bd        0x3 
+ *fill*         0x0000000010008845        0x3 
  .rodata.tud_task_ext
-                0x00000000100086c0       0x8c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010008848       0x8c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata._usbd_driver
-                0x000000001000874c       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000100088d4       0x18 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.dma_claim_unused_channel.str1.4
-                0x0000000010008764       0x1e CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
-                0x0000000010008784                . = ALIGN (0x4)
- *fill*         0x0000000010008782        0x2 
+                0x00000000100088ec       0x1e CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+                0x000000001000890c                . = ALIGN (0x4)
+ *fill*         0x000000001000890a        0x2 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x0000000010008784                . = ALIGN (0x4)
+                0x000000001000890c                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000010008784                __exidx_start = .
+                0x000000001000890c                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000010008784                __exidx_end = .
-                0x0000000010008784                . = ALIGN (0x4)
-                0x0000000010008784                __binary_info_start = .
+                0x000000001000890c                __exidx_end = .
+                0x000000001000890c                . = ALIGN (0x4)
+                0x000000001000890c                __binary_info_start = .
 
-.binary_info    0x0000000010008784       0x2c
+.binary_info    0x000000001000890c       0x2c
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x0000000010008784        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000890c        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x0000000010008788        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008910        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x000000001000878c        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008914        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x0000000010008790        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008918        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x0000000010008794        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000891c        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr56
-                0x0000000010008798        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008920        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x000000001000879c        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008924        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x00000000100087a0        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008928        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr33
-                0x00000000100087a4        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x000000001000892c        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr34
-                0x00000000100087a8        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010008930        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr182
-                0x00000000100087ac        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x00000000100087b0                __binary_info_end = .
+                0x0000000010008934        0x4 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010008938                __binary_info_end = .
 
-.rel.dyn        0x00000000100087b0        0x0
- .rel.iplt      0x00000000100087b0        0x0 /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x00000000100087b0                . = ALIGN (0x4)
+.rel.dyn        0x0000000010008938        0x0
+ .rel.iplt      0x0000000010008938        0x0 /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000010008938                . = ALIGN (0x4)
 
 .ram_vector_table
                 0x0000000020000000       0xc0
@@ -2337,7 +2287,7 @@ LOAD /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1
                 0x0000000020000000       0xc0 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x0000000020000000                ram_vector_table
 
-.data           0x00000000200000c0      0xf08 load address 0x00000000100087b0
+.data           0x00000000200000c0      0xf08 load address 0x0000000010008938
                 0x00000000200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2479,13 +2429,13 @@ LOAD /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1
  *(.jcr)
                 0x0000000020000fc8                . = ALIGN (0x4)
                 0x0000000020000fc8                __data_end__ = .
-                0x00000000100087b0                __etext = LOADADDR (.data)
+                0x0000000010008938                __etext = LOADADDR (.data)
 
-.igot.plt       0x0000000020000fc8        0x0 load address 0x00000000100096b8
+.igot.plt       0x0000000020000fc8        0x0 load address 0x0000000010009840
  .igot.plt      0x0000000020000fc8        0x0 /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x0000000020000fc8       0x20 load address 0x00000000100096b8
+                0x0000000020000fc8       0x20 load address 0x0000000010009840
                 0x0000000020000fc8                . = ALIGN (0x4)
  *(.uninitialized_data*)
  .uninitialized_data.ram_hash
@@ -2495,19 +2445,19 @@ LOAD /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1
  .uninitialized_data.rosc_samples
                 0x0000000020000fe0        0x8 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
 
-.scratch_x      0x0000000020040000        0x0 load address 0x00000000100096b8
+.scratch_x      0x0000000020040000        0x0 load address 0x0000000010009840
                 0x0000000020040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x0000000020040000                . = ALIGN (0x4)
                 0x0000000020040000                __scratch_x_end__ = .
-                0x00000000100096b8                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x0000000010009840                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x0000000020041000        0x0 load address 0x00000000100096b8
+.scratch_y      0x0000000020041000        0x0 load address 0x0000000010009840
                 0x0000000020041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x0000000020041000                . = ALIGN (0x4)
                 0x0000000020041000                __scratch_y_end__ = .
-                0x00000000100096b8                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x0000000010009840                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x0000000020000fe8      0xdd0
                 0x0000000020000fe8                . = ALIGN (0x4)
@@ -2655,8 +2605,8 @@ LOAD /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1
  *(.stack*)
  .stack         0x0000000020041000      0x800 CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x00000000100096b8        0x0
-                0x00000000100096b8                PROVIDE (__flash_binary_end = .)
+.flash_end      0x0000000010009840        0x0
+                0x0000000010009840                PROVIDE (__flash_binary_end = .)
                 0x0000000020040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x0000000020041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x0000000020042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2739,8 +2689,7 @@ LOAD CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_fix/
 LOAD CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
 LOAD CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 LOAD CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
-LOAD CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
-LOAD /tmp/cc2nYW7E.o
+LOAD /tmp/ccchKYna.o
 LOAD /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -2866,7 +2815,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000000000000884       0x2c CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
  .ARM.attributes
-                0x00000000000008b0       0x22 /tmp/cc2nYW7E.o
+                0x00000000000008b0       0x22 /tmp/ccchKYna.o
  .ARM.attributes
                 0x00000000000008d2       0x1e /opt/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes

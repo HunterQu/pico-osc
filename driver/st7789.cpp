@@ -332,6 +332,7 @@ void st7789_init_dma(){
 }
 
 void st7789_fill_dma_blocking(uint16_t pixel){
+    st7789_set_cursor(0, 0);
     if (!st7789_data_mode)
     {
         st7789_ramwr();

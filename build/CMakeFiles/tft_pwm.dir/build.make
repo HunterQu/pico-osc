@@ -1094,20 +1094,6 @@ CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s"
 	/usr/lib/ccache/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c -o CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
 
-CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: CMakeFiles/tft_pwm.dir/flags.make
-CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c
-CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: CMakeFiles/tft_pwm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hunter_h/projects/tft_pwm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj"
-	/usr/lib/ccache/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj -MF CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj.d -o CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj -c /home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c
-
-CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i"
-	/usr/lib/ccache/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c > CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
-
-CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s"
-	/usr/lib/ccache/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c -o CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
-
 # Object files for target tft_pwm
 tft_pwm_OBJECTS = \
 "CMakeFiles/tft_pwm.dir/tft_pwm.cpp.obj" \
@@ -1183,8 +1169,7 @@ tft_pwm_OBJECTS = \
 "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj" \
 "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj" \
 "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj" \
-"CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj" \
-"CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj"
+"CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj"
 
 # External object files for target tft_pwm
 tft_pwm_EXTERNAL_OBJECTS =
@@ -1263,11 +1248,10 @@ tft_pwm.elf: CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/p
 tft_pwm.elf: CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_rand/rand.c.obj
 tft_pwm.elf: CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 tft_pwm.elf: CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
-tft_pwm.elf: CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 tft_pwm.elf: CMakeFiles/tft_pwm.dir/build.make
 tft_pwm.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 tft_pwm.elf: CMakeFiles/tft_pwm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hunter_h/projects/tft_pwm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Linking CXX executable tft_pwm.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hunter_h/projects/tft_pwm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Linking CXX executable tft_pwm.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tft_pwm.dir/link.txt --verbose=$(VERBOSE)
 	/opt/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-objcopy -Oihex /home/hunter_h/projects/tft_pwm/build/tft_pwm.elf tft_pwm.hex
 	/opt/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-objcopy -Obinary /home/hunter_h/projects/tft_pwm/build/tft_pwm.elf tft_pwm.bin
