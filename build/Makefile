@@ -130,6 +130,19 @@ tft_pwm/fast:
 .PHONY : tft_pwm/fast
 
 #=============================================================================
+# Target rules for targets named tft_pwm_st7789_pio_h
+
+# Build rule for target.
+tft_pwm_st7789_pio_h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tft_pwm_st7789_pio_h
+.PHONY : tft_pwm_st7789_pio_h
+
+# fast build rule for target.
+tft_pwm_st7789_pio_h/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm_st7789_pio_h.dir/build.make CMakeFiles/tft_pwm_st7789_pio_h.dir/build
+.PHONY : tft_pwm_st7789_pio_h/fast
+
+#=============================================================================
 # Target rules for targets named ELF2UF2Build
 
 # Build rule for target.
@@ -1039,6 +1052,30 @@ home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm.dir/build.make CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 
+home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj: home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+.PHONY : home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj
+
+# target to build an object file
+home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm.dir/build.make CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+.PHONY : home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+
+home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.i: home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.i
+
+# target to preprocess a source file
+home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm.dir/build.make CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+
+home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.s: home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.s
+
+# target to generate assembly for a file
+home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm.dir/build.make CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+
 home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj
 
@@ -1820,6 +1857,7 @@ help:
 	@echo "... bs2_default_bin"
 	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
+	@echo "... tft_pwm_st7789_pio_h"
 	@echo "... bs2_default"
 	@echo "... tft_pwm"
 	@echo "... driver/st7789.obj"
@@ -1926,6 +1964,9 @@ help:
 	@echo "... home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i"
 	@echo "... home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s"
 	@echo "... home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj"
+	@echo "... home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj"
+	@echo "... home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.i"
+	@echo "... home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.s"
 	@echo "... home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj"
 	@echo "... home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i"
 	@echo "... home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s"

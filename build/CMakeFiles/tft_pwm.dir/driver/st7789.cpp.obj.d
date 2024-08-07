@@ -89,4 +89,9 @@ CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj: \
  /home/hunter_h/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pwm.h \
  /home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
  /home/hunter_h/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h \
- /home/hunter_h/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dma.h
+ /home/hunter_h/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dma.h \
+ /home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h \
+ /home/hunter_h/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pio.h \
+ /home/hunter_h/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h \
+ /home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h \
+ /home/hunter_h/projects/tft_pwm/build/st7789.pio.h

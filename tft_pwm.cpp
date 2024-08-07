@@ -14,8 +14,6 @@ const struct st7789_config lcd_config = {
     .gpio_rst = 21,
     .gpio_bl  = 26,
 };
-const int lcd_width = 172;
-const int lcd_height = 322 ;
 
 int main()
 {
@@ -23,7 +21,7 @@ int main()
 
     sleep_ms(1000);
 
-    st7789_init(&lcd_config, lcd_width, lcd_height);
+    st7789_init(&lcd_config);
 
     st7789_set_bl_brightness(40);
     
@@ -32,7 +30,8 @@ int main()
     for (uint8_t i = 0; i < 50; i++){
 
         // st7789_fill(get_rand_32() & 0xffff);
-        st7789_fill_dma_blocking(get_rand_32() & 0xffff);
+        // st7789_fill_dma_blocking(get_rand_32() & 0xffff);
+        st7789_fill_pio_dma_blocking(get_rand_32() & 0xffff);
     } 
     uint32_t end_time = time_us_32();
     printf("Elapsed time:%.2f\n", (end_time - start_time) / 1000000.0f);

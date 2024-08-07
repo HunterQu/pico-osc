@@ -35,7 +35,7 @@ add_executable(tft_pwm
 )
 
 # Init pio
-# pico_generate_pio_header(tft_pwm ${CMAKE_CURRENT_LIST_DIR}/driver/st7789.pio)
+pico_generate_pio_header(tft_pwm ${CMAKE_CURRENT_LIST_DIR}/driver/st7789.pio)
 
 pico_set_program_name(tft_pwm "tft_pwm")
 pico_set_program_version(tft_pwm "0.1")
@@ -61,6 +61,7 @@ target_link_libraries(tft_pwm
         hardware_spi
         hardware_dma
         hardware_pwm
+        hardware_pio
         )
 
 pico_add_extra_outputs(tft_pwm)

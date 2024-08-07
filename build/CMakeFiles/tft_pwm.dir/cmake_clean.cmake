@@ -69,6 +69,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
   "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj.d"
   "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
+  "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj"
+  "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj.d"
   "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
   "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj.d"
   "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"

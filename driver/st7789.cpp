@@ -12,16 +12,21 @@
 #include "hardware/pwm.h"
 #include "hardware/spi.h"
 #include "hardware/dma.h"
-// #include <time.h>
-
-
-#define offset_x 34
-#define offset_y 0
+#include "hardware/pio.h"
+#include "build/st7789.pio.h"
 
 static struct st7789_config st7789_cfg;
-static uint16_t st7789_width;
-static uint16_t st7789_height;
-static bool st7789_data_mode = false;
+// static uint16_t st7789_width;
+// static uint16_t st7789_height;
+
+st7789_device tftDevice = {
+    .width = ST7789_WIDTH,
+    .height = ST7789_HEIGHT,
+    .offset_x = ST7789_OFFSET_X,
+    .offset_y = ST7789_OFFSET_Y,
+    .data_mode = false,
+    .clear_in_process = false
+};
 
 static void st7789_cmd(uint8_t cmd, const uint8_t *data, size_t len)
 {
@@ -29,7 +34,7 @@ static void st7789_cmd(uint8_t cmd, const uint8_t *data, size_t len)
     {
         spi_set_format(st7789_cfg.spi, 8, SPI_CPOL_1, SPI_CPHA_1, SPI_MSB_FIRST);
     }
-    st7789_data_mode = false;
+    tftDevice.data_mode = false;
 
     // sleep_us(1);
     
@@ -56,34 +61,35 @@ static void st7789_cmd(uint8_t cmd, const uint8_t *data, size_t len)
 void st7789_caset(uint16_t xs, uint16_t xe)
 {
     uint8_t data[] = {
-        xs >> 8,
-        xs & 0xff,
-        xe >> 8,
-        xe & 0xff,
+        static_cast<uint8_t>(xs >> 8),
+        static_cast<uint8_t>(xs & 0xff),
+        static_cast<uint8_t>(xe >> 8),
+        static_cast<uint8_t>(xe & 0xff),
     };
 
     // CASET (2Ah): Column Address Set
     st7789_cmd(0x2a, data, sizeof(data));
 }
 
+
 void st7789_raset(uint16_t ys, uint16_t ye)
 {
     uint8_t data[] = {
-        ys >> 8,
-        ys & 0xff,
-        ye >> 8,
-        ye & 0xff,
+        static_cast<uint8_t>(ys >> 8),
+        static_cast<uint8_t>(ys & 0xff),
+        static_cast<uint8_t>(ye >> 8),
+        static_cast<uint8_t>(ye & 0xff),
     };
 
     // RASET (2Bh): Row Address Set
     st7789_cmd(0x2b, data, sizeof(data));
 }
 
-void st7789_init(const struct st7789_config *config, uint16_t width, uint16_t height)
+void st7789_init(const struct st7789_config *config)
 {
     memcpy(&st7789_cfg, config, sizeof(st7789_cfg));
-    st7789_width = width;
-    st7789_height = height;
+    // st7789_width = width;
+    // st7789_height = height;
 
     // spi_init(st7789_cfg.spi, 20 * 1000 * 1000);
     uint baudrate = spi_init(st7789_cfg.spi, st7789_cfg.baud);
@@ -173,8 +179,8 @@ void st7789_init(const struct st7789_config *config, uint16_t width, uint16_t he
     uint8_t data_36[] = {0b01100000};
     // st7789_cmd(0x36, data_36, 1);
 
-    st7789_caset(0 + offset_x, width + offset_x);
-    st7789_raset(0 + offset_y, height + offset_y);
+    st7789_caset(0 + tftDevice.offset_x, tftDevice.width + tftDevice.offset_x);
+    st7789_raset(0 + tftDevice.offset_y, tftDevice.height + tftDevice.offset_y);
 
     // INVON (21h): Display Inversion On
     st7789_cmd(0x21, NULL, 0);
@@ -213,6 +219,9 @@ void st7789_init(const struct st7789_config *config, uint16_t width, uint16_t he
     //clear
     st7789_fill(0x0000);
 
+    // init pio
+    st7789_init_pio(st7789_cfg.gpio_din, st7789_cfg.gpio_clk, 1.0f);
+
     //init DMA
     st7789_init_dma();
 
@@ -245,7 +254,7 @@ void st7789_ramwr()
 
 void st7789_write(const void *data, size_t len)
 {
-    if (!st7789_data_mode)
+    if (!tftDevice.data_mode)
     {
         st7789_ramwr();
 
@@ -253,7 +262,7 @@ void st7789_write(const void *data, size_t len)
             spi_set_format(st7789_cfg.spi, 16, SPI_CPOL_1, SPI_CPHA_1, SPI_MSB_FIRST);
         }
 
-        st7789_data_mode = true;
+        tftDevice.data_mode = true;
     }
 
     spi_write16_blocking(st7789_cfg.spi, (const uint16_t *)data, len / 2);
@@ -266,7 +275,7 @@ void st7789_put(uint16_t pixel)
 
 void st7789_fill(uint16_t pixel)
 {
-    int num_pixels = st7789_width * st7789_height;
+    int num_pixels = tftDevice.width * tftDevice.height;
 
     st7789_set_cursor(0, 0);
 
@@ -278,35 +287,75 @@ void st7789_fill(uint16_t pixel)
 
 void st7789_set_cursor(uint16_t x, uint16_t y)
 {
-    st7789_caset(offset_x + x, offset_x + st7789_width);
-    st7789_raset(offset_y + y, offset_y + st7789_height);
+    st7789_caset(tftDevice.offset_x + x, tftDevice.offset_x + tftDevice.width);
+    st7789_raset(tftDevice.offset_y + y, tftDevice.offset_y + tftDevice.height);
 }
 
 void st7789_set_windows(uint16_t xStart, uint16_t yStart, uint16_t xEnd, uint16_t yEnd)
 {
-    st7789_caset(offset_x + xStart, offset_x + xEnd);
-    st7789_raset(offset_y + yStart, offset_y + yEnd);
+    st7789_caset(tftDevice.offset_x + xStart, tftDevice.offset_x + xEnd);
+    st7789_raset(tftDevice.offset_y + yStart, tftDevice.offset_y + yEnd);
 }
 
 void st7789_vertical_scroll(uint16_t row)
 {
     uint8_t data[] = {
-        (row >> 8) & 0xff,
-        row & 0x00ff};
+        static_cast<uint8_t>((row >> 8) & 0xff),
+        static_cast<uint8_t>(row & 0x00ff),
+    };
 
     // VSCSAD (37h): Vertical Scroll Start Address of RAM
     st7789_cmd(0x37, data, sizeof(data));
 }
 
-static int dma_channel_clear_tx;
-static volatile bool clear_in_process = false;
+
 
 static void clear_complete(void){
-    if (dma_channel_get_irq0_status(dma_channel_clear_tx)){
-        dma_channel_acknowledge_irq0(dma_channel_clear_tx);
+    if (dma_channel_get_irq0_status(tftDevice.dma_channel_clear_tx)){
+        dma_channel_acknowledge_irq0(tftDevice.dma_channel_clear_tx);
 
-        clear_in_process = false;
+        tftDevice.clear_in_process = false;
     }
+}
+
+static void st7789_init_pio(uint pin_mosi, uint pin_sck, float clk_div){
+    //get offset of pio program
+    uint offset = pio_add_program(PIO_HANDLER, &st7789_tft_spi_program);
+
+    //get a available pio state-machine
+    uint sm = pio_claim_unused_sm(PIO_HANDLER, true);
+
+    // init gpio pins
+    pio_gpio_init(PIO_HANDLER, pin_mosi);
+    pio_gpio_init(PIO_HANDLER, pin_sck);
+
+    // init gpio dir
+    pio_sm_set_consecutive_pindirs(PIO_HANDLER, sm, pin_mosi, 1, true);
+    pio_sm_set_consecutive_pindirs(PIO_HANDLER, sm, pin_sck, 1, true);
+
+    // init sm: get default config & configure it
+    pio_sm_config c = st7789_tft_spi_program_get_default_config(offset);
+
+    // set side_set pin
+    sm_config_set_sideset_pins(&c, pin_sck);
+
+    // set outpins
+    sm_config_set_out_pins(&c, pin_mosi, 1);
+
+    // set combine fifo
+    sm_config_set_fifo_join(&c, PIO_FIFO_JOIN_TX);
+
+    // set clk div
+    sm_config_set_clkdiv(&c, clk_div);
+
+    // set output-shift-reg direction, auto-pull, bits
+    sm_config_set_out_shift(&c, false, true, 16);
+
+    // init state-machine and enable it
+    pio_sm_init(PIO_HANDLER, sm, offset, &c);
+    pio_sm_set_enabled(PIO_HANDLER, sm, true);
+
+    tftDevice.pio_sm = sm;
 }
 
 void st7789_init_dma(){
@@ -315,12 +364,14 @@ void st7789_init_dma(){
 
     dma_channel_config c = dma_channel_get_default_config(dma_clear_channel);
 
-    channel_config_set_dreq(&c, spi_get_dreq(st7789_cfg.spi, true));
+    // channel_config_set_dreq(&c, spi_get_dreq(st7789_cfg.spi, true));
+    channel_config_set_dreq(&c, pio_get_dreq(PIO_HANDLER, tftDevice.pio_sm, true)); 
     channel_config_set_read_increment(&c, false);
     channel_config_set_write_increment(&c, false);
     channel_config_set_transfer_data_size(&c, DMA_SIZE_16);
 
-    dma_channel_configure(dma_clear_channel, &c, &spi_get_hw(st7789_cfg.spi)->dr, nullptr, 0, false);
+    // dma_channel_configure(dma_clear_channel, &c, &spi_get_hw(st7789_cfg.spi)->dr, nullptr, 0, false);
+    dma_channel_configure(dma_clear_channel, &c, &PIO_HANDLER->txf[tftDevice.pio_sm], nullptr, 0, false);
 
     //irq when finishing screen clear
     dma_set_irq0_channel_mask_enabled(dma_clear_channel, true);
@@ -328,12 +379,12 @@ void st7789_init_dma(){
     irq_set_exclusive_handler(DMA_IRQ_0, clear_complete);
     irq_set_enabled(DMA_IRQ_0, true);
 
-    dma_channel_clear_tx = dma_clear_channel;
+    tftDevice.dma_channel_clear_tx = dma_clear_channel;
 }
 
 void st7789_fill_dma_blocking(uint16_t pixel){
     st7789_set_cursor(0, 0);
-    if (!st7789_data_mode)
+    if (!tftDevice.data_mode)
     {
         st7789_ramwr();
 
@@ -341,13 +392,32 @@ void st7789_fill_dma_blocking(uint16_t pixel){
             spi_set_format(st7789_cfg.spi, 16, SPI_CPOL_1, SPI_CPHA_1, SPI_MSB_FIRST);
         }
 
-        st7789_data_mode = true;
+        tftDevice.data_mode = true;
     }
-    dma_channel_transfer_from_buffer_now(dma_channel_clear_tx, &pixel, st7789_width * st7789_height);
-    dma_channel_wait_for_finish_blocking(dma_channel_clear_tx);
+    dma_channel_transfer_from_buffer_now(tftDevice.dma_channel_clear_tx, &pixel, ST7789_SIZE);
+    dma_channel_wait_for_finish_blocking(tftDevice.dma_channel_clear_tx);
 }
 void st7789_fill_dma_irq(uint16_t pixel){
-    while (clear_in_process);
-    dma_channel_transfer_from_buffer_now(dma_channel_clear_tx, &pixel, st7789_width * st7789_height);
-    clear_in_process = true;
+    while (tftDevice.clear_in_process);
+    dma_channel_transfer_from_buffer_now(tftDevice.dma_channel_clear_tx, &pixel, ST7789_SIZE);
+    tftDevice.clear_in_process = true;
+}
+
+
+
+void st7789_fill_pio_dma_blocking(uint16_t pixel){
+    st7789_set_cursor(0, 0);
+    if (!tftDevice.data_mode)
+    {
+        st7789_ramwr();
+
+        {
+            spi_set_format(st7789_cfg.spi, 16, SPI_CPOL_1, SPI_CPHA_1, SPI_MSB_FIRST);
+        }
+
+        tftDevice.data_mode = true;
+    }
+
+    dma_channel_transfer_from_buffer_now(tftDevice.dma_channel_clear_tx, &pixel, ST7789_SIZE);
+    dma_channel_wait_for_finish_blocking(tftDevice.dma_channel_clear_tx);
 }

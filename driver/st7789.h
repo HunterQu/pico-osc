@@ -10,6 +10,13 @@
 #ifndef _PICO_ST7789_H_
 #define _PICO_ST7789_H_
 
+//Screen Size
+#define ST7789_WIDTH    172
+#define ST7789_HEIGHT   322
+#define ST7789_OFFSET_X 34
+#define ST7789_OFFSET_Y 0
+#define ST7789_SIZE     (ST7789_HEIGHT * ST7789_WIDTH)
+
 //PIO
 #define PIO_HANDLER pio0
 
@@ -24,8 +31,21 @@ struct st7789_config {
     uint gpio_bl;
 };
 
+typedef struct _st7789_device
+{
+    uint16_t width;
+    uint16_t height;
+    uint16_t offset_x;
+    uint16_t offset_y;
+    bool     data_mode;
+    int dma_channel_clear_tx;
+    volatile bool clear_in_process;
+    uint     pio_sm;
+} st7789_device;
 
-void st7789_init(const struct st7789_config* config, uint16_t width, uint16_t height);
+extern st7789_device tftDevice;
+
+void st7789_init(const struct st7789_config* config);
 void st7789_write(const void* data, size_t len);
 void st7789_put(uint16_t pixel);
 void st7789_fill(uint16_t pixel);
@@ -36,5 +56,6 @@ void st7789_vertical_scroll(uint16_t row);
 void st7789_set_windows(uint16_t xStart, uint16_t yStart, uint16_t xEnd, uint16_t yEnd);
 void st7789_set_bl_brightness(uint8_t b);
 void st7789_init_dma();
-
+void st7789_fill_pio_dma_blocking(uint16_t pixel);
+static void st7789_init_pio(uint pin_mosi, uint pin_sck, float clk_div);
 #endif

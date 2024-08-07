@@ -74,6 +74,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
+  "."
   "../"
   "../.."
   "../driver/.."
@@ -127,6 +128,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_spi/include"
   "/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_dma/include"
   "/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pwm/include"
+  "/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/include"
   )
 
 # The set of dependency files which are needed:
@@ -164,6 +166,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj" "gcc" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj.d"
   "/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" "gcc" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj.d"
   "/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj" "gcc" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj.d"
+  "/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj" "gcc" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj.d"
   "/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj" "gcc" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj.d"
   "/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj" "gcc" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj.d"
   "/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj" "gcc" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj.d"
