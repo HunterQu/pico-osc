@@ -1,6 +1,7 @@
 # Hashes of file build rules.
 030cb03973b719ac035ea1bdf07bf37b CMakeFiles/ELF2UF2Build
 71512be5ce62807fed233704274e3b2b CMakeFiles/ELF2UF2Build-complete
+030cb03973b719ac035ea1bdf07bf37b CMakeFiles/tft_pwm_read_ad_data_pio_h
 030cb03973b719ac035ea1bdf07bf37b CMakeFiles/tft_pwm_st7789_pio_h
 d7ebe630f504b4c73f9bbb8164e9430b elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-build
 2ae73c2cba47b0bd53639a15401606dc elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-configure
@@ -24,4 +25,5 @@ b8f68bf905967a106978cf95c2ffb736 pico-sdk/src/rp2_common/pico_cyw43_driver/pioas
 f7484c925e162f2b853eb51e4961b377 pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir
 6fbb32bc43cea791e4da3a0f6a167969 pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch
 3ff92c4c88e7bcfe500cfd219209682a pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update
+2fcdeb29b7f844a959c43c5c626ecfbe read_ad_data.pio.h
 737ad0b97fe735316552077d222148e2 st7789.pio.h

@@ -1,5 +1,6 @@
 /home/hunter_h/projects/tft_pwm/build/CMakeFiles/tft_pwm.dir
 /home/hunter_h/projects/tft_pwm/build/CMakeFiles/tft_pwm_st7789_pio_h.dir
+/home/hunter_h/projects/tft_pwm/build/CMakeFiles/tft_pwm_read_ad_data_pio_h.dir
 /home/hunter_h/projects/tft_pwm/build/CMakeFiles/ELF2UF2Build.dir
 /home/hunter_h/projects/tft_pwm/build/CMakeFiles/edit_cache.dir
 /home/hunter_h/projects/tft_pwm/build/CMakeFiles/rebuild_cache.dir

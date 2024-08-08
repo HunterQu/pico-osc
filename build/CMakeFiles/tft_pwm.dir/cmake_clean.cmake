@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/tft_pwm.dir/driver/read_ad_data.cpp.obj"
+  "CMakeFiles/tft_pwm.dir/driver/read_ad_data.cpp.obj.d"
   "CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj"
   "CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj.d"
   "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
@@ -136,8 +138,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
   "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj"
   "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj.d"
-  "CMakeFiles/tft_pwm.dir/tft_pwm.cpp.obj"
-  "CMakeFiles/tft_pwm.dir/tft_pwm.cpp.obj.d"
+  "CMakeFiles/tft_pwm.dir/main.cpp.obj"
+  "CMakeFiles/tft_pwm.dir/main.cpp.obj.d"
   "tft_pwm.elf"
   "tft_pwm.pdb"
 )

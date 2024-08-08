@@ -30,12 +30,14 @@ pico_sdk_init()
 # Add executable. Default name is the project name, version 0.1
 
 add_executable(tft_pwm 
-  tft_pwm.cpp 
+  main.cpp 
   driver/st7789.cpp
+  driver/read_ad_data.cpp
 )
 
 # Init pio
 pico_generate_pio_header(tft_pwm ${CMAKE_CURRENT_LIST_DIR}/driver/st7789.pio)
+pico_generate_pio_header(tft_pwm ${CMAKE_CURRENT_LIST_DIR}/driver/read_ad_data.pio)
 
 pico_set_program_name(tft_pwm "tft_pwm")
 pico_set_program_version(tft_pwm "0.1")
@@ -62,6 +64,7 @@ target_link_libraries(tft_pwm
         hardware_dma
         hardware_pwm
         hardware_pio
+        hardware_gpio
         )
 
 pico_add_extra_outputs(tft_pwm)

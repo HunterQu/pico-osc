@@ -194,9 +194,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj" "gcc" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj.d"
   "/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" "gcc" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
   "/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj" "gcc" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj.d"
+  "/home/hunter_h/projects/tft_pwm/driver/read_ad_data.cpp" "CMakeFiles/tft_pwm.dir/driver/read_ad_data.cpp.obj" "gcc" "CMakeFiles/tft_pwm.dir/driver/read_ad_data.cpp.obj.d"
   "/home/hunter_h/projects/tft_pwm/driver/st7789.cpp" "CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj" "gcc" "CMakeFiles/tft_pwm.dir/driver/st7789.cpp.obj.d"
   "/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" "gcc" "CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
-  "/home/hunter_h/projects/tft_pwm/tft_pwm.cpp" "CMakeFiles/tft_pwm.dir/tft_pwm.cpp.obj" "gcc" "CMakeFiles/tft_pwm.dir/tft_pwm.cpp.obj.d"
+  "/home/hunter_h/projects/tft_pwm/main.cpp" "CMakeFiles/tft_pwm.dir/main.cpp.obj" "gcc" "CMakeFiles/tft_pwm.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.

@@ -17,6 +17,8 @@
 #define ST7789_OFFSET_Y 0
 #define ST7789_SIZE     (ST7789_HEIGHT * ST7789_WIDTH)
 
+#define RGB565(r, g, b) ((((r)&0xf8) << 8) | (((g)&0xfc) << 3) | (b) >> 3) 
+
 //PIO
 #define PIO_HANDLER pio0
 
@@ -38,8 +40,9 @@ typedef struct _st7789_device
     uint16_t offset_x;
     uint16_t offset_y;
     bool     data_mode;
-    int dma_channel_clear_tx;
     volatile bool clear_in_process;
+    int dma_channel_clear_tx;
+    int dma_channel_draw_tx;
     uint     pio_sm;
 } st7789_device;
 
@@ -57,5 +60,6 @@ void st7789_set_windows(uint16_t xStart, uint16_t yStart, uint16_t xEnd, uint16_
 void st7789_set_bl_brightness(uint8_t b);
 void st7789_init_dma();
 void st7789_fill_pio_dma_blocking(uint16_t pixel);
+void st7789_draw_dma_blocking(uint16_t *data, uint32_t len);
 static void st7789_init_pio(uint pin_mosi, uint pin_sck, float clk_div);
 #endif

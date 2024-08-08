@@ -1,0 +1,6 @@
+.program read_ad_data
+.side_set 1
+
+loop:
+    in pins, 12     side 0
+    jmp loop        side 1

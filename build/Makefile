@@ -143,6 +143,19 @@ tft_pwm_st7789_pio_h/fast:
 .PHONY : tft_pwm_st7789_pio_h/fast
 
 #=============================================================================
+# Target rules for targets named tft_pwm_read_ad_data_pio_h
+
+# Build rule for target.
+tft_pwm_read_ad_data_pio_h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tft_pwm_read_ad_data_pio_h
+.PHONY : tft_pwm_read_ad_data_pio_h
+
+# fast build rule for target.
+tft_pwm_read_ad_data_pio_h/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm_read_ad_data_pio_h.dir/build.make CMakeFiles/tft_pwm_read_ad_data_pio_h.dir/build
+.PHONY : tft_pwm_read_ad_data_pio_h/fast
+
+#=============================================================================
 # Target rules for targets named ELF2UF2Build
 
 # Build rule for target.
@@ -219,6 +232,30 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h: cmake_check_build_system
 cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
+
+driver/read_ad_data.obj: driver/read_ad_data.cpp.obj
+.PHONY : driver/read_ad_data.obj
+
+# target to build an object file
+driver/read_ad_data.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm.dir/build.make CMakeFiles/tft_pwm.dir/driver/read_ad_data.cpp.obj
+.PHONY : driver/read_ad_data.cpp.obj
+
+driver/read_ad_data.i: driver/read_ad_data.cpp.i
+.PHONY : driver/read_ad_data.i
+
+# target to preprocess a source file
+driver/read_ad_data.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm.dir/build.make CMakeFiles/tft_pwm.dir/driver/read_ad_data.cpp.i
+.PHONY : driver/read_ad_data.cpp.i
+
+driver/read_ad_data.s: driver/read_ad_data.cpp.s
+.PHONY : driver/read_ad_data.s
+
+# target to generate assembly for a file
+driver/read_ad_data.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm.dir/build.make CMakeFiles/tft_pwm.dir/driver/read_ad_data.cpp.s
+.PHONY : driver/read_ad_data.cpp.s
 
 driver/st7789.obj: driver/st7789.cpp.obj
 .PHONY : driver/st7789.obj
@@ -1820,29 +1857,29 @@ home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm.dir/build.make CMakeFiles/tft_pwm.dir/home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 .PHONY : home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
-tft_pwm.obj: tft_pwm.cpp.obj
-.PHONY : tft_pwm.obj
+main.obj: main.cpp.obj
+.PHONY : main.obj
 
 # target to build an object file
-tft_pwm.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm.dir/build.make CMakeFiles/tft_pwm.dir/tft_pwm.cpp.obj
-.PHONY : tft_pwm.cpp.obj
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm.dir/build.make CMakeFiles/tft_pwm.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-tft_pwm.i: tft_pwm.cpp.i
-.PHONY : tft_pwm.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-tft_pwm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm.dir/build.make CMakeFiles/tft_pwm.dir/tft_pwm.cpp.i
-.PHONY : tft_pwm.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm.dir/build.make CMakeFiles/tft_pwm.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-tft_pwm.s: tft_pwm.cpp.s
-.PHONY : tft_pwm.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-tft_pwm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm.dir/build.make CMakeFiles/tft_pwm.dir/tft_pwm.cpp.s
-.PHONY : tft_pwm.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tft_pwm.dir/build.make CMakeFiles/tft_pwm.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -1857,9 +1894,13 @@ help:
 	@echo "... bs2_default_bin"
 	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
+	@echo "... tft_pwm_read_ad_data_pio_h"
 	@echo "... tft_pwm_st7789_pio_h"
 	@echo "... bs2_default"
 	@echo "... tft_pwm"
+	@echo "... driver/read_ad_data.obj"
+	@echo "... driver/read_ad_data.i"
+	@echo "... driver/read_ad_data.s"
 	@echo "... driver/st7789.obj"
 	@echo "... driver/st7789.i"
 	@echo "... driver/st7789.s"
@@ -2060,9 +2101,9 @@ help:
 	@echo "... home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj"
 	@echo "... home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i"
 	@echo "... home/hunter_h/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s"
-	@echo "... tft_pwm.obj"
-	@echo "... tft_pwm.i"
-	@echo "... tft_pwm.s"
+	@echo "... main.obj"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
