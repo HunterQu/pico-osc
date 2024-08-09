@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "hardware/spi.h"
+#include "hardware/vreg.h"
+#include "hardware/clocks.h"
 #include "driver/st7789.h"
 #include "driver/read_ad_data.h"
 #include "pico/rand.h"
@@ -9,7 +11,7 @@
 
 const struct st7789_config lcd_config = {
     .spi      = spi0,
-    .baud     = 65 * 1000 * 1000,
+    .baud     = 125 * 1000 * 1000,
     .gpio_din = 19,
     .gpio_clk = 18,
     .gpio_cs  = -1,
@@ -18,7 +20,8 @@ const struct st7789_config lcd_config = {
     .gpio_bl  = 26,
 };
 
-uint16_t screen_buffer[ST7789_WIDTH];
+uint16_t screen_buffer[ST7789_WIDTH * 2];
+#define screen_buffer(i) (&screen_buffer[(i) * ST7789_WIDTH])
 
 void test_fill_pio_dma(){
     uint32_t start_time = time_us_32();
@@ -58,7 +61,7 @@ void test_draw_photo(int x, int y){
     }
 }
 
-void test_draw(float div){
+void test_draw_at_a_fix_div(float div){
     st7789_fill_dma_blocking(0x0000);
 
 
@@ -66,33 +69,46 @@ void test_draw(float div){
     read_ad_pio_dma(300, ad_data.data);
     // ad_data.len += 300;
 
+    uint8_t f = 0;
     st7789_set_windows(10, 10, 160, 310);
-    for (int i = 0; i * 2 < 300; i++){
+    for (int i = 0; i < 300; i++){
         ad_data.data[i] = 4095 - ad_data.data[i];
         ad_data.data[i] = ad_data.data[i] * 150 / 4096;
 
         if (i){
-            memset(screen_buffer, 0, sizeof(screen_buffer));
-            screen_buffer[ad_data.data[i]] = RGB565(255, 255, 0);
-            st7789_draw_dma_blocking(screen_buffer, 150);
-
-            memset(screen_buffer, 0, sizeof(screen_buffer));
+            memset(screen_buffer(f), 0, sizeof(uint16_t) * ST7789_WIDTH);
             for (int k = ad_data.data[i - 1]; k <= ad_data.data[i]; k++){
-                screen_buffer[k] = RGB565(255, 255, 0);
+                screen_buffer(f)[k] = RGB565(255, 255, 0);
             }
             for (int k = ad_data.data[i]; k <= ad_data.data[i - 1]; k++){
-                screen_buffer[k] = RGB565(255, 255, 0);
+                screen_buffer(f)[k] = RGB565(255, 255, 0);
             }
-            st7789_draw_dma_blocking(screen_buffer, 150);
+            st7789_draw_dma_blocking(screen_buffer(f), 150);
+            f = 1 - f;
         }
     }
 }
 
 int main()
 {
+    vreg_set_voltage(VREG_VOLTAGE_1_20); // 300MHz需要加到1.35v
+    sleep_ms(10);
+    bool sys_clk_ = set_sys_clock_khz(250 * 1000, false);
+
+    uint32_t freq = clock_get_hz(clk_sys);
+
+    // clk_peri does not have a divider, so input and output frequencies will be the same
+    clock_configure(clk_peri,
+                        0,
+                        CLOCKS_CLK_PERI_CTRL_AUXSRC_VALUE_CLK_SYS,
+                        freq,
+                        freq);
+
     stdio_init_all();
 
     sleep_ms(1000);
+
+    if (sys_clk_) printf("system clock set finish\n");
 
     st7789_init(&lcd_config);
 
@@ -104,8 +120,8 @@ int main()
     // test_ramdom_line();
 
     while(1){
-        test_draw(3.0f);
-        sleep_ms(100);
+        test_draw_at_a_fix_div(1.0f);
+        sleep_ms(500);
     }
     // read_ad_pio_dma(1000)
 }

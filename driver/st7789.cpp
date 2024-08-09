@@ -25,7 +25,7 @@ st7789_device tftDevice = {
     .offset_x = ST7789_OFFSET_X,
     .offset_y = ST7789_OFFSET_Y,
     .data_mode = false,
-    .clear_in_process = false
+    .draw_in_process = false
 };
 
 static void st7789_cmd(uint8_t cmd, const uint8_t *data, size_t len)
@@ -316,11 +316,11 @@ void st7789_vertical_scroll(uint16_t row)
 
 
 
-static void clear_complete(void){
-    if (dma_channel_get_irq0_status(tftDevice.dma_channel_clear_tx)){
-        dma_channel_acknowledge_irq0(tftDevice.dma_channel_clear_tx);
+static void draw_complete(void){
+    if (dma_channel_get_irq0_status(tftDevice.dma_channel_draw_tx)){
+        dma_channel_acknowledge_irq0(tftDevice.dma_channel_draw_tx);
 
-        tftDevice.clear_in_process = false;
+        tftDevice.draw_in_process = false;
     }
 }
 
@@ -379,12 +379,6 @@ void st7789_init_dma(){
     dma_channel_configure(dma_clear_channel, &c, &spi_get_hw(st7789_cfg.spi)->dr, nullptr, 0, false);
     // dma_channel_configure(dma_clear_channel, &c, &PIO_HANDLER->txf[tftDevice.pio_sm], nullptr, 0, false);
 
-    //irq when finishing screen clear
-    dma_set_irq0_channel_mask_enabled(dma_clear_channel, true);
-
-    irq_set_exclusive_handler(DMA_IRQ_0, clear_complete);
-    irq_set_enabled(DMA_IRQ_0, true);
-
     tftDevice.dma_channel_clear_tx = dma_clear_channel;
 
     int dmaDrawChannel = dma_claim_unused_channel(true);
@@ -392,11 +386,17 @@ void st7789_init_dma(){
     dma_channel_config d = dma_channel_get_default_config(dmaDrawChannel);
     // channel_config_set_dreq(&d, pio_get_dreq(PIO_HANDLER, tftDevice.pio_sm, true));
     channel_config_set_dreq(&d, spi_get_dreq(st7789_cfg.spi, true));
-    channel_config_set_read_increment(&c, true);
-    channel_config_set_write_increment(&c, false);
+    channel_config_set_read_increment(&d, true);
+    channel_config_set_write_increment(&d, false);
     channel_config_set_transfer_data_size(&d, DMA_SIZE_16);
     // dma_channel_configure(dmaDrawChannel, &d, (uint32_t *)&PIO_HANDLER->txf[tftDevice.pio_sm], nullptr, 0, false);
     dma_channel_configure(dmaDrawChannel, &d, &spi_get_hw(st7789_cfg.spi)->dr, nullptr, 0, false);
+
+    //irq when finishing screen draw
+    dma_channel_set_irq0_enabled(dmaDrawChannel, true);
+
+    irq_set_exclusive_handler(DMA_IRQ_0, draw_complete);
+    irq_set_enabled(DMA_IRQ_0, true);
 
     tftDevice.dma_channel_draw_tx = dmaDrawChannel; 
 }
@@ -416,13 +416,6 @@ void st7789_fill_dma_blocking(uint16_t pixel){
     dma_channel_transfer_from_buffer_now(tftDevice.dma_channel_clear_tx, &pixel, ST7789_SIZE);
     dma_channel_wait_for_finish_blocking(tftDevice.dma_channel_clear_tx);
 }
-void st7789_fill_dma_irq(uint16_t pixel){
-    while (tftDevice.clear_in_process);
-    dma_channel_transfer_from_buffer_now(tftDevice.dma_channel_clear_tx, &pixel, ST7789_SIZE);
-    tftDevice.clear_in_process = true;
-}
-
-
 
 void st7789_fill_pio_dma_blocking(uint16_t pixel){
     st7789_set_cursor(0, 0);
@@ -455,4 +448,22 @@ void st7789_draw_dma_blocking(uint16_t *data, uint32_t len){
 
     dma_channel_transfer_from_buffer_now(tftDevice.dma_channel_draw_tx, data, len);
     dma_channel_wait_for_finish_blocking(tftDevice.dma_channel_draw_tx);
+}
+
+
+void st7789_draw_dma_irq(uint16_t *data, uint32_t len){
+    if (!tftDevice.data_mode)
+    {
+        st7789_ramwr();
+
+        {
+            spi_set_format(st7789_cfg.spi, 16, SPI_CPOL_1, SPI_CPHA_1, SPI_MSB_FIRST);
+        }
+
+        tftDevice.data_mode = true;
+    }
+
+    while (tftDevice.draw_in_process);
+    dma_channel_transfer_from_buffer_now(tftDevice.dma_channel_draw_tx, data, len);
+    tftDevice.draw_in_process = true;
 }

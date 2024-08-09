@@ -3417,6 +3417,9 @@ CMakeFiles/tft_pwm.dir/main.cpp.obj: ../main.cpp \
   /home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
   /home/hunter_h/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
   /home/hunter_h/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+  /home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_vreg/include/hardware/vreg.h \
+  /home/hunter_h/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/vreg_and_chip_reset.h \
+  /home/hunter_h/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/vreg_and_chip_reset.h \
   ../driver/st7789.h \
   ../driver/read_ad_data.h \
   /home/hunter_h/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
