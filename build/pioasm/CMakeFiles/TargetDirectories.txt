@@ -1,3 +1,0 @@
-/home/hunter_h/projects/tft_pwm/build/pioasm/CMakeFiles/pioasm.dir
-/home/hunter_h/projects/tft_pwm/build/pioasm/CMakeFiles/edit_cache.dir
-/home/hunter_h/projects/tft_pwm/build/pioasm/CMakeFiles/rebuild_cache.dir
