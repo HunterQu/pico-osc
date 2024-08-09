@@ -33,6 +33,7 @@ add_executable(tft_pwm
   main.cpp 
   driver/st7789.cpp
   driver/read_ad_data.cpp
+  fft.cpp
 )
 
 # Init pio

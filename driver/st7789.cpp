@@ -93,7 +93,7 @@ void st7789_init(const struct st7789_config *config)
 
     // spi_init(st7789_cfg.spi, 20 * 1000 * 1000);
     uint baudrate = spi_init(st7789_cfg.spi, st7789_cfg.baud);
-    printf("SPI baudrate: %d\n", baudrate);
+    printf("SPI baudrate: %dmhz\n", baudrate / 1000 / 1000);
     
     gpio_init(17);
     gpio_pull_down(17);
@@ -217,16 +217,10 @@ void st7789_init(const struct st7789_config *config)
     pwm_set_enabled(slice_num, true);
 
     //clear
-    st7789_fill(RGB565(0, 100, 0));
+    st7789_fill(RGB565(0, 0, 0));
 
     // init pio
-    // st7789_init_pio(st7789_cfg.gpio_din, st7789_cfg.gpio_clk, 1.0f);
-
-    st7789_set_cursor(10, 100);
-    for (int i = 0; i < 100; i++)
-    {
-        st7789_put(0xff00);
-    }
+    // st7789_init_pio(st7789_cfg.gpio_din, st7789_cfg.gpio_clk, 1.0f)
 
     //init DMA
     st7789_init_dma();

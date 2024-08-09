@@ -39,7 +39,7 @@ extern read_ad_device_t   ad_device;
 
 void read_ad_init();
 void read_ad_pio_init(uint pin_data_base, uint pin_clk, float clk_div);
-void read_ad_pio_dma(int n, uint16_t * capture_buf);
+uint32_t read_ad_pio_dma(int n, uint16_t * capture_buf);
 void read_ad_pio_set_div_clk(float div_clk);
 
 #endif

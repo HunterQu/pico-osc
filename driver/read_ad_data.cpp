@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "time.h"
 #include "hardware/dma.h"
 #include "hardware/pio.h"
 #include "read_ad_data.h"
@@ -86,7 +87,7 @@ void read_ad_init(){
     init_dma();
 }
 
-void read_ad_pio_dma(int n, uint16_t * capture_buf){
+uint32_t read_ad_pio_dma(int n, uint16_t * capture_buf){
     pio_sm_set_enabled(AD_PIO_HANDLER, ad_device.sm, false);
 
     pio_sm_clear_fifos(AD_PIO_HANDLER, ad_device.sm);
@@ -94,9 +95,12 @@ void read_ad_pio_dma(int n, uint16_t * capture_buf){
 
     dma_channel_transfer_to_buffer_now(ad_device.dma_channel, capture_buf, n);
 
+    uint32_t st = time_us_32(), ed;
     pio_sm_set_enabled(AD_PIO_HANDLER, ad_device.sm, true);
 
     dma_channel_wait_for_finish_blocking(ad_device.dma_channel);
+    ed = time_us_32();
+    return ed - st;
 }
 
 void read_ad_pio_set_div_clk(float div_clk){

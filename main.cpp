@@ -7,7 +7,7 @@
 #include "driver/read_ad_data.h"
 #include "pico/rand.h"
 #include "pico/stdlib.h"
-#include "image_data.h"
+#include "fft.h"
 
 const struct st7789_config lcd_config = {
     .spi      = spi0,
@@ -51,15 +51,15 @@ void test_ramdom_line(){
     }
 }
 
-void test_draw_photo(int x, int y){
-    // st7789_set_cursor(0, 0);
-    st7789_set_windows(x, y, x + image_width, y + image_height);
+// void test_draw_photo(int x, int y){
+//     // st7789_set_cursor(0, 0);
+//     st7789_set_windows(x, y, x + image_width, y + image_height);
 
-    for (int i = 0; i < image_height; i++){
-        memcpy(screen_buffer, &image_data[i * image_width], image_width * sizeof(uint16_t));
-        st7789_draw_dma_blocking(screen_buffer, image_width);
-    }
-}
+//     for (int i = 0; i < image_height; i++){
+//         memcpy(screen_buffer, &image_data[i * image_width], image_width * sizeof(uint16_t));
+//         st7789_draw_dma_blocking(screen_buffer, image_width);
+//     }
+// }
 
 void test_draw_at_a_fix_div(float div){
     st7789_fill_dma_blocking(0x0000);
@@ -77,6 +77,9 @@ void test_draw_at_a_fix_div(float div){
 
         if (i){
             memset(screen_buffer(f), 0, sizeof(uint16_t) * ST7789_WIDTH);
+            if (!(i % 50)){
+                memset(screen_buffer(f), 0xff, sizeof(uint16_t) * ST7789_WIDTH);
+            }
             for (int k = ad_data.data[i - 1]; k <= ad_data.data[i]; k++){
                 screen_buffer(f)[k] = RGB565(255, 255, 0);
             }
@@ -89,26 +92,88 @@ void test_draw_at_a_fix_div(float div){
     }
 }
 
+void draw_fft(){
+    int N = 512;
+#define SAMPLING_RATE (100 * 1000 * 1000)
+    
+    read_ad_pio_set_div_clk(clock_get_hz(clk_sys) / SAMPLING_RATE / 2); //25mhz
+    printf("time:%dus\n", read_ad_pio_dma(N + 30, ad_data.data));
+
+    Complex fft_res[N];
+    double magnitudeResult[N / 2];
+    double frequencies[N / 2];
+
+    for (int i = 0; i < N; i++){
+        fft_res[i].real = ad_data.data[i];
+        fft_res[i].imag = 0.0;
+    }
+
+    removeDCOffset(fft_res, N);
+
+    fft(fft_res, N);
+
+    printf("finish fft\n");
+
+    for (int i = 0; i < N / 2; ++i) {
+        magnitudeResult[i] = magnitude(fft_res[i]);
+        frequencies[i] = i * (SAMPLING_RATE / N);
+    }
+
+    for (int i = 0; i < N / 2; ++i) {
+        printf("%.2f, ", magnitudeResult[i]);
+    }
+    printf("\n");
+
+    int peakIndex = 0;
+    double peakmag = 0;
+    for (int i = 1; i < N / 2; ++i) {
+        if (magnitudeResult[i] > magnitudeResult[peakIndex]) {
+            peakIndex = i;
+            peakmag = magnitudeResult[i];
+        }
+    }
+
+    double peakFrequency = frequencies[peakIndex];
+    printf("\n");
+    printf("%.2fHz\n", peakFrequency);
+
+
+    uint8_t f = 0;
+    st7789_set_windows(10, 10, 160, 310);
+    for (int i = 0; i < 300; i++){
+        magnitudeResult[i] = magnitudeResult[i] * 150 / peakmag;
+
+        if (i){
+            memset(screen_buffer(f), 0, sizeof(uint16_t) * ST7789_WIDTH);
+            for (int k = 0; k <= (int)magnitudeResult[i]; ++k)
+                screen_buffer(f)[k] = RGB565(255, 255, 0);
+            // screen_buffer(f)[(int)magnitudeResult[i]] = RGB565(255, 255, 0);
+            st7789_draw_dma_blocking(screen_buffer(f), 150);
+            f = 1 - f;
+        }
+    }
+}
+
 int main()
 {
     vreg_set_voltage(VREG_VOLTAGE_1_20); // 300MHz需要加到1.35v
     sleep_ms(10);
     bool sys_clk_ = set_sys_clock_khz(250 * 1000, false);
 
-    uint32_t freq = clock_get_hz(clk_sys);
+    uint32_t sys_freq = clock_get_hz(clk_sys);
 
     // clk_peri does not have a divider, so input and output frequencies will be the same
     clock_configure(clk_peri,
                         0,
                         CLOCKS_CLK_PERI_CTRL_AUXSRC_VALUE_CLK_SYS,
-                        freq,
-                        freq);
+                        sys_freq,
+                        sys_freq);
 
     stdio_init_all();
 
     sleep_ms(1000);
 
-    if (sys_clk_) printf("system clock set finish\n");
+    if (sys_clk_) printf("system clock:%dmhz\n", clock_get_hz(clk_sys) / 1000 / 1000);
 
     st7789_init(&lcd_config);
 
@@ -119,9 +184,13 @@ int main()
     // test_draw_photo(0, 0);
     // test_ramdom_line();
 
+    // while(1){
+    //     test_draw_at_a_fix_div(1.0f);
+    //     sleep_ms(50);
+    // }    
+    
     while(1){
-        test_draw_at_a_fix_div(1.0f);
-        sleep_ms(500);
+        draw_fft();
+        sleep_ms(100);
     }
-    // read_ad_pio_dma(1000)
 }
