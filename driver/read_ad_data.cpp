@@ -100,6 +100,7 @@ uint32_t read_ad_pio_dma(int n, uint16_t * capture_buf){
 
     dma_channel_wait_for_finish_blocking(ad_device.dma_channel);
     ed = time_us_32();
+    pio_sm_set_enabled(AD_PIO_HANDLER, ad_device.sm, false);
     return ed - st;
 }
 

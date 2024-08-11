@@ -85,6 +85,34 @@ void st7789_raset(uint16_t ys, uint16_t ye)
     st7789_cmd(0x2b, data, sizeof(data));
 }
 
+void st7789_set_dir(bool dir){
+    if (dir){
+        // MADCTL (36h): Memory Data Access Control
+        // - Page Address Order            = Top to Bottom
+        // - Column Address Order          = Left to Right
+        // - Page/Column Order             = Normal Mode
+        // - Line Address Order            = LCD Refresh Top to Bottom
+        // - RGB/BGR Order                 = RGB
+        // - Display Data Latch Data Order = LCD Refresh Left to Right
+        uint8_t data_36[] = {0b00000000};
+        st7789_cmd(0x36, data_36, 1);
+
+        tftDevice.width = ST7789_WIDTH;
+        tftDevice.height = ST7789_HEIGHT;
+        tftDevice.offset_x = ST7789_OFFSET_X;
+        tftDevice.offset_y = ST7789_OFFSET_Y;
+    } else {
+        uint8_t data_36[] = {0b01100000};
+        st7789_cmd(0x36, data_36, 1);
+
+        tftDevice.width = ST7789_HEIGHT;
+        tftDevice.height = ST7789_WIDTH;
+        tftDevice.offset_x = ST7789_OFFSET_Y;
+        tftDevice.offset_y = ST7789_OFFSET_X;
+    }
+    // sleep_ms(1);
+}
+
 void st7789_init(const struct st7789_config *config)
 {
     memcpy(&st7789_cfg, config, sizeof(st7789_cfg));
@@ -169,15 +197,7 @@ void st7789_init(const struct st7789_config *config)
     st7789_cmd(0x3a, data_3a, 1);
     sleep_ms(10);
 
-    // MADCTL (36h): Memory Data Access Control
-    // - Page Address Order            = Top to Bottom
-    // - Column Address Order          = Left to Right
-    // - Page/Column Order             = Normal Mode
-    // - Line Address Order            = LCD Refresh Top to Bottom
-    // - RGB/BGR Order                 = RGB
-    // - Display Data Latch Data Order = LCD Refresh Left to Right
-    uint8_t data_36[] = {0b01100000};
-    // st7789_cmd(0x36, data_36, 1);
+    st7789_set_dir(1);
 
     st7789_caset(0 + tftDevice.offset_x, tftDevice.width + tftDevice.offset_x);
     st7789_raset(0 + tftDevice.offset_y, tftDevice.height + tftDevice.offset_y);
@@ -460,4 +480,43 @@ void st7789_draw_dma_irq(uint16_t *data, uint32_t len){
     while (tftDevice.draw_in_process);
     dma_channel_transfer_from_buffer_now(tftDevice.dma_channel_draw_tx, data, len);
     tftDevice.draw_in_process = true;
+}
+
+
+void st7789_draw_char(char ch, const GFXfont *font, uint16_t x, uint16_t y, uint16_t ft_color, uint16_t bg_color){
+    uint8_t ch_offset = font->first;
+    uint8_t width = font->glyph[ch - ch_offset].width, height = font->glyph[ch - ch_offset].height;
+
+    x += font->glyph[ch - ch_offset].xOffset;
+    y += font->glyph[ch - ch_offset].yOffset;
+
+    st7789_set_windows(x, y, x + width, y + height);
+
+    sleep_ms(1);
+
+    uint8_t *bitmap = &font->bitmap[font->glyph[ch - ch_offset].bitmapOffset];
+
+    uint16_t ch_buffer[width * height];
+
+    for (int i = 0; i < width * height; ++i){
+        if (bitmap[i / 8] & (1 << (7 - i % 8))){
+            ch_buffer[i] = ft_color;
+        } else {
+            ch_buffer[i] = bg_color;
+        }
+    }
+
+    printf("%c\n", ch);
+
+    st7789_draw_dma_blocking(ch_buffer, width * height);
+    
+    sleep_ms(1);
+}
+
+void st7789_draw_text(const char *text, uint8_t len, const GFXfont *font, uint16_t x, uint16_t y, uint16_t ft_color, uint16_t bg_color){
+    uint8_t ch_offset = font->first;
+    for (uint8_t i = 0; i < len; i++){
+        st7789_draw_char(text[i], font, x, y, ft_color, bg_color);
+        x += font->glyph[text[i] - ch_offset].xAdvance;
+    }
 }

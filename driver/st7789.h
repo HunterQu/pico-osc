@@ -6,6 +6,7 @@
  */
 #include "hardware/spi.h"
 #include "pico/types.h"
+#include "font_type.h"
 
 #ifndef _PICO_ST7789_H_
 #define _PICO_ST7789_H_
@@ -49,6 +50,7 @@ typedef struct _st7789_device
 extern st7789_device tftDevice;
 
 void st7789_init(const struct st7789_config* config);
+void st7789_set_dir(bool dir);
 void st7789_write(const void* data, size_t len);
 void st7789_put(uint16_t pixel);
 void st7789_fill(uint16_t pixel);
@@ -61,4 +63,6 @@ void st7789_init_dma();
 void st7789_fill_pio_dma_blocking(uint16_t pixel);
 void st7789_draw_dma_blocking(uint16_t *data, uint32_t len);
 void st7789_draw_dma_irq(uint16_t *data, uint32_t len);
+void st7789_draw_char(char ch, const GFXfont *font, uint16_t x, uint16_t y, uint16_t ft_color, uint16_t bg_color = 0x0000);
+void st7789_draw_text(const char * text, uint8_t len, const GFXfont *font, uint16_t x, uint16_t y, uint16_t ft_color, uint16_t bg_color = 0x0000);
 #endif

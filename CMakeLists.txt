@@ -43,6 +43,7 @@ pico_generate_pio_header(tft_pwm ${CMAKE_CURRENT_LIST_DIR}/driver/read_ad_data.p
 pico_set_program_name(tft_pwm "tft_pwm")
 pico_set_program_version(tft_pwm "0.1")
 
+# pico_set_binary_type(tft_pwm no_flash)
 pico_enable_stdio_uart(tft_pwm 1)
 pico_enable_stdio_usb(tft_pwm 1)
 
